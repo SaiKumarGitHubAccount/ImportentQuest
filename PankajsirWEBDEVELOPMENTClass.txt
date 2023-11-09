@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 style="color:red">Testing Campus</h1>
+    <h2 style="color:green">Testing Campus</h2>
+    <h3 style="color:brown">Testing Campus</h3>
+    <h4 style="color:pink">Testing Campus</h4>
+    <h5 style="color:yellow">Testing Campus</h5>
+    <h4 style="font-family:verdana">Testing Campus</h4>
+    <h6 style="font-size:100px;color:green">Testing Campus</h6>
+    
+      <!--<h1 class="title">Hello World! </h1>-->
+      <!--<p id="currentTime"></p>-->
+      <!--<script src="script.js"></script>-->
+  </body>
+</html>

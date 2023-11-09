@@ -1,0 +1,407 @@
+package p1Controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+import java.sql.*;
+@WebServlet("RegistrationForm")
+public class UpdateUserServlet extends HttpServlet {
+	private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+	private static final String DB_URL = "jdbc:mysql://localhost:3306/registration_app_100";
+	private static final String DB_USER = "root";
+	private static final String DB_PASS = "test";
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+
+		String email = request.getParameter("email"); // Assuming you have a userId parameter
+		String username = request.getParameter("Username");
+		String password = request.getParameter("Password");
+		String mobile = request.getParameter("mobile");
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		try {
+			Class.forName(JDBC_DRIVER);
+			conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+
+			// Prepare the update query
+			String updateQuery = "  insert into registration username=?, password=?,mobile=? email=?";
+			pstmt = conn.prepareStatement(updateQuery);
+			pstmt.setString(1, username);
+			pstmt.setString(2, password);
+			pstmt.setString(3, email);
+			pstmt.setString(4, mobile);
+
+			// Execute the update
+			int rowsAffected = pstmt.executeUpdate();
+
+			if (rowsAffected > 0) {
+				out.println("User information updated successfully.");
+			} else {
+				out.println("Failed to update user information.");
+			}
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException se) {
+				se.printStackTrace();
+			}
+		}
+	}
+}
+****************
+package p1Controller;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import p2Model.DAOService;
+import p2Model.DAOServiceImpl;
+
+@WebServlet("/VerifyLogin")
+public class VerifyLogin extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	public VerifyLogin() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String username=request.getParameter("username");
+		String password=request.getParameter("password");
+		DAOService service =new DAOServiceImpl();
+		service.ConnectDB();
+		boolean status = service.verifylogin(username, password);
+		if(status) {
+			response.sendRedirect("Success.html");
+		}else {
+		request.setAttribute("error", "invalid details");
+		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+		rd.forward(request, response);
+		}
+	}
+
+}
+********************8
+package p2Model;
+
+public interface DAOService {
+	public void ConnectDB();
+
+	public boolean verifylogin(String username, String password);
+
+	public boolean ExistsByEmail(String email);
+
+	public void SaveRegistration(String username, String password, String email, String mobile);
+}
+************8
+package p2Model;
+
+import java.sql.*;
+
+public class DAOServiceImpl implements DAOService {
+	private Connection con;
+	private Statement stmnt;
+
+	@Override
+	public void ConnectDB() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ registration_app_101", "root", "test");
+			stmnt = con.createStatement();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public boolean verifylogin(String username, String password) {
+		try {
+			ResultSet result = stmnt.executeQuery("Select * from  registration where username='" + username + "'and password='" + password + "'");
+		return result.next();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	@Override
+	public void SaveRegistration(String username, String password, String email, String mobile) {
+		try {
+			stmnt.executeUpdate("insert into  registration values(username='" + username + "', password='" + password + "',mobile='"+mobile+"',email='"+email+"');");
+		System.out.println(username);
+		System.out.println(email);
+		System.out.println(password);
+		System.out.println(mobile);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public boolean ExistsByEmail(String email) {
+		try {
+			ResultSet result = stmnt.executeQuery("Select * from  registration where email='" + email + "'");
+			System.out.println(email);
+		return result.next();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+}
+***********
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form" action="VerifyLogin" method="POST">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    <%
+	if (request.getAttribute("error") != null) {
+		out.print(request.getAttribute("error"));
+	}
+	%>
+    <script src="script.js"></script>
+    <p>new register?<a href="RegistrationForm.jsp">NewRegistration</a> </p>
+</body>
+</html>
+    ************
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="registration-container">
+		<h2>Registration</h2>
+		<form id="registration-form" action="RegistrationForm" method="POST">
+			<div class="form-group">
+				<label for="username">Username:</label> <input type="text"
+					id="username" name="username" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label> <input type="email" id="email"
+					name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password:</label> <input type="password"
+					id="password" name="password" required>
+			</div>
+			<div class="form-group">
+				<label for="mobile">Mobile:</label> <input type="text" id="mobile"
+					name="mobile" required>
+			</div>
+			<div class="form-group">
+				<button type="submit">Register</button>
+			</div>
+		</form>
+	</div>
+	<%
+	if (request.getAttribute("msg") != null) {
+		out.print(request.getAttribute("msg"));
+	}
+	%>
+	<script src="script.js"></script>
+	<p>
+		Back to Login?<a href="login.jsp">login</a>
+	</p>
+</body>
+</html>
+****************************
+@charset "ISO-8859-1";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.registration-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Add additional styling for form validation messages or other elements as needed */
+@charset "ISO-8859-1";
+body {
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/******************************************************************/
+/#
+In a Spring Boot application that uses Hibernate as the JPA (Java Persistence API) provider, the spring.jpa.hibernate.ddl-auto property is used to control how Hibernate generates and manages database schema changes. This property allows you to specify how you want Hibernate to handle the database schema during application startup.
+
+Here are the common values you can use for spring.jpa.hibernate.ddl-auto:
+
+Create:
+
+This value will create a new database schema for your entities on every application startup. It will drop the existing schema if it exists and then recreate it. This option is typically used for development and testing but should be used with caution in production, as it can lead to data loss.
+Example in application.properties:
+
+properties
+Copy code
+spring.jpa.hibernate.ddl-auto = create
+Update:
+
+This value tells Hibernate to update the existing database schema to match your entity classes. It will add missing tables and columns but will not drop or modify existing columns or tables. This option is generally safe for development and can be used cautiously in production to perform non-destructive updates to the schema.
+Example in application.properties:
+
+properties
+Copy code
+spring.jpa.hibernate.ddl-auto = update
+Validate:
+
+This value tells Hibernate to validate that the database schema matches the entity classes. It won't make any changes to the schema but will throw an exception if there are discrepancies. This is suitable for production environments where you want to ensure that the schema is consistent with your entity definitions.
+Example in application.properties:
+
+properties
+Copy code
+spring.jpa.hibernate.ddl-auto = validate
+Create-Drop:
+
+This value is similar to "create," but it drops the schema at application shutdown. It's typically used in testing environments where you want to create and drop the schema for each test run.
+Example in application.properties:
+
+properties
+Copy code
+spring.jpa.hibernate.ddl-auto = create-drop
+None:
+
+This value tells Hibernate not to perform any automatic schema generation or validation. You are responsible for managing the database schema manually. This is suitable for production environments where you have a well-defined and stable schema.
+Example in application.properties:
+
+properties
+Copy code
+spring.jpa.hibernate.ddl-auto = none
+The choice of spring.jpa.hibernate.ddl-auto value depends on your development and deployment requirements. In production environments, it's common to set it to none and manage database schema changes separately through database migration tools like Flyway or Liquibase to ensure better control and data integrity. In development and testing environments, values like update or create-drop may be more suitable for ease of development and testing.

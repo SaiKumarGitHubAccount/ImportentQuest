@@ -1,0 +1,61 @@
+Step 1: Add Project Dependency
+<dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-mail</artifactId>
+</dependency>
+Step 2: Set up App Password inside your Google Account
+Go to (Google Account)[https://myaccount.google.com]
+On Search Bar, search for App Passwords then you should see App Passwords with Security under it
+Under Select App, find Other (Custom Name), input your desired name then click Generate
+Copy the password we will use it later
+Step 3: Set up Application.properties
+spring.mail.username=youremail@gmail.com
+spring.mail.properties.mail.smtp.starttls.required=true
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.password=Copied Password From App Password
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.transport.protocol=smtp
+spring.mail.properties.mail.smtp.starttls.enable=true
+Step 4: Configure Bean for JavaMailSender
+@Configuration
+public class MailConfiguration {
+
+    @Bean
+    public JavaMailSender getJavaMailSender() {
+        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+        mailSender.setHost("smtp.gmail.com");
+        mailSender.setPort(587);
+
+        mailSender.setUsername("your@gmail.com");
+        mailSender.setPassword("copiedPassword");
+
+        Properties props = mailSender.getJavaMailProperties();
+        props.put("mail.transport.protocol", "smtp");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.debug", "true");
+
+        return mailSender;
+    }
+}
+Step 5: Implement MailSenderService
+@Service
+public class MailSenderService {
+    @Autowired
+    private JavaMailSender mailSender;
+
+    public void sendNewMail(String to, String subject, String body) {
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(to);
+        message.setSubject(subject);
+        message.setText(body);
+        mailSender.send(message);
+    }
+}
+Step 6: Start sending email
+private final MailSenderService mailService;
+
+public void Foo(){
+ mailService.sendNewMail("test@gmail.com", "Subject right here", "Body right there!")
+}

@@ -1,0 +1,111 @@
+Remote Repository URL:====>https://github.com/saikumar601531boya/testrepo.git
+
+*************************************************************************
+
+GitHub is a web-based platform for version control and collaboration using Git. Git is a distributed version control system that helps you track changes in your code and collaborate with others on software projects. Here are some common GitHub commands and actions you might use:
+
+Cloning a Repository:
+
+To clone a repository to your local machine:
+bash
+Copy code
+git clone <repository_URL>
+Creating a Repository:
+
+To create a new repository on GitHub:
+Go to GitHub and click the "+" sign in the top right corner.
+Select "New Repository" and follow the prompts.
+Adding and Committing Changes:
+
+To stage all changes for commit:
+csharp
+Copy code
+git add .
+To commit staged changes:
+sql
+Copy code
+git commit -m "Your commit message here"
+Pushing Changes to GitHub:
+
+To push your committed changes to a GitHub repository:
+perl
+Copy code
+git push origin <branch_name>
+Branching:
+
+To create a new branch:
+php
+Copy code
+git branch <branch_name>
+To switch to a branch:
+php
+Copy code
+git checkout <branch_name>
+To create a new branch and switch to it:
+css
+Copy code
+git checkout -b <new_branch_name>
+Pulling Changes from GitHub:
+
+To fetch and merge changes from a remote repository:
+php
+Copy code
+git pull origin <branch_name>
+Merging Branches:
+
+To merge changes from one branch into another:
+php
+Copy code
+git checkout <target_branch>
+git merge <source_branch>
+Viewing Status and History:
+
+To check the status of your repository:
+lua
+Copy code
+git status
+To view commit history:
+bash
+Copy code
+git log
+Creating Pull Requests:
+
+To create a pull request on GitHub for code review and merging:
+Go to your repository on GitHub.
+Click on the "Pull Requests" tab.
+Click "New Pull Request" and follow the prompts.
+Collaborating with Remotes:
+
+To add a remote repository:
+php
+Copy code
+git remote add <remote_name> <remote_URL>
+To list remote repositories:
+Copy code
+git remote -v
+Removing Files and Directories:
+
+To remove a file from your working directory and stage the deletion:
+bash
+Copy code
+git rm <file_name>
+To remove a directory and its contents:
+bash
+Copy code
+git rm -r <directory_name>
+Undoing Changes:
+
+To discard local changes in your working directory:
+lua
+Copy code
+git checkout -- <file_name>
+To undo the last commit (be cautious with this):
+perl
+Copy code
+git reset HEAD~1
+These are some of the basic GitHub commands and actions. GitHub provides a wide range of features for collaboration, project management, and code review, so you may also want to explore more advanced actions and features based on your specific needs.
+
+
+
+
+

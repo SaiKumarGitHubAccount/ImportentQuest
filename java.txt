@@ -1,0 +1,3829 @@
+
+how to speak English fluently 
+ChatGPT
+Becoming fluent in English requires consistent practice and immersion in the language. Here are some tips to help you improve your English speaking skills:
+
+Immerse Yourself in English: Surround yourself with English as much as possible. Watch movies, TV shows, and documentaries in English. Listen to English music, podcasts, and audiobooks. This exposure will help you get accustomed to the language and improve your listening skills.
+
+Practice Speaking Regularly: Actively practice speaking English on a regular basis. Find a language exchange partner or join conversation groups to practice speaking with native English speakers or other learners. You can also practice speaking on your own by thinking in English or having imaginary conversations.
+
+Focus on Pronunciation: Pay attention to the pronunciation of words and practice speaking them correctly. Listen to native English speakers, imitate their intonation and stress patterns, and try to mimic their pronunciation. You can also use pronunciation apps or online resources to help you improve your pronunciation.
+
+Expand Your Vocabulary: Work on expanding your vocabulary by learning new words and phrases. Read books, newspapers, and online articles in English. Keep a vocabulary notebook to jot down new words and review them regularly. Practice using these new words in sentences to reinforce your learning.
+
+Think in English: Try to think in English rather than translating from your native language. This helps you develop a more natural flow when speaking. As you practice more, you'll find it easier to think directly in English.
+
+Take Advantage of Language Learning Apps: There are numerous language learning apps available that can help you practice speaking English. Apps like Duolingo, HelloTalk, and Tandem provide language exercises, allow you to chat with native speakers, and offer speaking practice opportunities.
+
+Seek Feedback: Ask for feedback from native English speakers or language teachers. They can point out any errors you make and provide guidance on how to improve. Constructive feedback is invaluable in helping you refine your English speaking skills.
+
+Be Confident and Don't Be Afraid of Making Mistakes: Building fluency takes time, and it's natural to make mistakes along the way. Embrace them as part of the learning process and don't be afraid to take risks. The more you practice, the more your confidence will grow, and the more fluent you will become.
+
+Remember, becoming fluent in any language requires time, effort, and dedication. Stay motivated, set goals, and practice consistently. With persistence and regular practice, you will make significant progress in speaking English fluently.
+
+
+
+
+
+User
+java language basics
+ChatGPT
+Sure! Here are some basic concepts and features of the Java programming language:
+
+Syntax: Java has a C-style syntax, which means it uses curly braces {} to define blocks of code. Each statement in Java typically ends with a semicolon (;).
+
+Variables and Data Types: In Java, you need to declare variables before using them. Java supports various data types, including integers (int), floating-point numbers (float, double), characters (char), booleans (boolean), and more. You can also create objects of classes as data types.
+
+Control Flow: Java provides control flow statements such as if-else, switch-case, for loops, while loops, and do-while loops to control the flow of execution in a program.
+
+Functions and Methods: Java uses methods (also called functions) to encapsulate blocks of code that can be reused. Methods can take input parameters and return values.
+
+Object-Oriented Programming (OOP): Java is an object-oriented programming language. It supports concepts such as classes, objects, inheritance, polymorphism, and encapsulation. Classes are used to define objects, which are instances of those classes. OOP allows for modular and organized code structure.
+
+Packages and Import Statements: Java uses packages to organize classes and interfaces. You can use import statements to bring classes from other packages into your program.
+
+Exception Handling: Java has a built-in exception handling mechanism to deal with runtime errors. It allows you to catch and handle exceptions using try-catch blocks.
+
+Input and Output: Java provides libraries (e.g., java.util.Scanner, java.io) for input and output operations. These libraries allow you to read input from the user, write output to the console, and perform file operations.
+
+Arrays: Java supports arrays, which are containers for holding multiple values of the same type. Arrays have a fixed size, and elements are accessed using indices.
+
+Memory Management: Java handles memory management automatically through a mechanism called garbage collection. It deallocates memory for objects that are no longer referenced, freeing developers from manual memory management.
+
+These are just some of the basics of the Java programming language. As you progress, you can explore more advanced concepts and features, such as interfaces, generics, multithreading, and Java libraries for different domains.
+
+
+
+
+
+User
+java controlflow
+ChatGPT
+In Java, control flow refers to the order in which statements are executed in a program. Java provides several control flow statements to control the flow of execution based on different conditions. Here are some commonly used control flow statements in Java:
+
+if-else Statement:
+The if-else statement allows you to execute a block of code conditionally. If the specified condition is true, the code inside the if block is executed; otherwise, the code inside the else block is executed.
+java
+Copy code
+if (condition) {
+    // Code to be executed if the condition is true
+} else {
+    // Code to be executed if the condition is false
+}
+switch-case Statement:
+The switch-case statement allows you to perform different actions based on the value of an expression. It provides a cleaner alternative to a long chain of if-else statements.
+java
+Copy code
+switch (expression) {
+    case value1:
+        // Code to be executed if the expression matches value1
+        break;
+    case value2:
+        // Code to be executed if the expression matches value2
+        break;
+    // more cases...
+    default:
+        // Code to be executed if none of the cases match
+        break;
+}
+for Loop:
+The for loop is used to iterate over a block of code for a specified number of times. It consists of an initialization statement, a condition, and an increment or decrement statement.
+java
+Copy code
+for (initialization; condition; increment/decrement) {
+    // Code to be executed in each iteration
+}
+while Loop:
+The while loop repeatedly executes a block of code as long as the specified condition is true.
+java
+Copy code
+while (condition) {
+    // Code to be executed while the condition is true
+}
+do-while Loop:
+The do-while loop is similar to the while loop but ensures that the code block is executed at least once before checking the condition.
+java
+Copy code
+do {
+    // Code to be executed
+} while (condition);
+break Statement:
+The break statement is used to terminate a loop or switch-case statement prematurely. It is often used to exit a loop when a certain condition is met.
+java
+Copy code
+while (condition) {
+    if (someCondition) {
+        break; // Exit the loop
+    }
+}
+continue Statement:
+The continue statement is used to skip the rest of the current iteration in a loop and continue with the next iteration.
+java
+Copy code
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        continue; // Skip the rest of the code and continue to the next iteration
+    }
+    // Code to be executed in each iteration except when i equals 5
+}
+These control flow statements allow you to control the execution of your Java programs based on different conditions, enabling you to make decisions, iterate over collections, and handle various scenarios more effectively.
+
+
+
+
+
+User
+java interview programes
+ChatGPT
+Certainly! Here are a few commonly asked Java interview programs that can help you prepare:
+
+Program to Reverse a String:
+java
+Copy code
+public class StringReversal {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        String reversed = reverseString(str);
+        System.out.println(reversed);
+    }
+    
+    public static String reverseString(String str) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = str.length() - 1; i >= 0; i--) {
+            sb.append(str.charAt(i));
+        }
+        return sb.toString();
+    }
+}
+Program to Find the Fibonacci Series:
+java
+Copy code
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        int n = 10; // Number of Fibonacci numbers to generate
+        System.out.println("Fibonacci Series:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(fibonacci(i) + " ");
+        }
+    }
+    
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+Program to Find the Factorial of a Number:
+java
+Copy code
+public class Factorial {
+    public static void main(String[] args) {
+        int number = 5;
+        int factorial = calculateFactorial(number);
+        System.out.println("Factorial of " + number + " is: " + factorial);
+    }
+    
+    public static int calculateFactorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * calculateFactorial(n - 1);
+    }
+}
+Program to Check if a Number is Prime:
+java
+Copy code
+public class PrimeNumber {
+    public static void main(String[] args) {
+        int number = 17;
+        boolean isPrime = checkPrime(number);
+        if (isPrime) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
+        }
+    }
+    
+    public static boolean checkPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+Program to Find the Sum of Digits of a Number:
+java
+Copy code
+public class SumOfDigits {
+    public static void main(String[] args) {
+        int number = 12345;
+        int sum = calculateSum(number);
+        System.out.println("Sum of digits of " + number + " is: " + sum);
+    }
+    
+    public static int calculateSum(int n) {
+        int sum = 0;
+        while (n > 0) {
+            int digit = n % 10;
+            sum += digit;
+            n /= 10;
+        }
+        return sum;
+    }
+}
+These programs cover a range of concepts like string manipulation, recursion, loops, and number operations. Practice these programs and make sure you understand the logic behind them. Additionally, you can explore more complex programs and algorithms to further enhance your Java programming skills.
+
+
+
+
+
+User
+java interview questions
+ChatGPT
+Certainly! Here are some commonly asked Java interview questions:
+
+What is Java? Explain its features and advantages.
+What are the differences between Java and C++?
+What is the difference between JDK, JRE, and JVM?
+Explain the concept of object-oriented programming (OOP) and its pillars.
+What is the difference between abstract classes and interfaces in Java?
+What are the access modifiers in Java? Explain their differences.
+What is the difference between checked and unchecked exceptions in Java?
+What is the difference between the "==" operator and the equals() method in Java?
+What is the purpose of the "final" keyword in Java?
+What is method overloading and method overriding in Java?
+Explain the concept of multithreading in Java.
+What is the difference between a class and an object in Java?
+How does garbage collection work in Java?
+What are the different types of memory in Java, and how are they used?
+Explain the concept of generics in Java and its benefits.
+What is the Java Collection Framework? Explain some commonly used collection classes.
+What are the differences between ArrayList and LinkedList in Java?
+How does exception handling work in Java? Explain the try-catch-finally block.
+What are the SOLID principles in Java? Explain each principle briefly.
+How does Java support polymorphism? Explain with an example.
+These are just a few examples of the types of questions you may encounter in a Java interview. It's important to have a good understanding of core Java concepts, OOP principles, exception handling, collections, and other fundamental topics. Additionally, be prepared to write code and explain your thought process during the interview. Practice coding and reviewing Java programs to build confidence and improve your problem-solving skills.
+
+
+
+
+
+User
+java interview questions with answers
+ChatGPT
+Certainly! Here are the answers to some commonly asked Java interview questions:
+
+What is Java? Explain its features and advantages.
+Answer: Java is a high-level, object-oriented programming language that is designed to be platform-independent. It features automatic memory management through garbage collection, strong type-checking, and a rich set of libraries. Some advantages of Java include its robustness, portability, scalability, and wide industry adoption.
+
+What are the differences between Java and C++?
+Answer: Some differences between Java and C++ include:
+
+Memory Management: Java has automatic memory management through garbage collection, while C++ requires manual memory management.
+Platform Independence: Java programs can run on any platform with a Java Virtual Machine (JVM), while C++ programs need to be compiled separately for each platform.
+Object-Oriented Programming: Java enforces OOP principles more strictly than C++.
+Exceptions: Exception handling in Java is built-in and enforced, while in C++ it is optional.
+Standard Libraries: Java has a comprehensive standard library, while C++ provides a more minimalistic library.
+What is the difference between JDK, JRE, and JVM?
+Answer:
+
+JDK (Java Development Kit): It is a software development kit that includes the necessary tools, libraries, and compilers for developing Java applications.
+JRE (Java Runtime Environment): It is an environment that provides the necessary runtime support for executing Java applications. It includes JVM and essential libraries.
+JVM (Java Virtual Machine): It is a virtual machine that executes Java bytecode. It provides a runtime environment for running Java applications.
+What is the difference between abstract classes and interfaces in Java?
+Answer:
+
+Abstract classes can have both abstract and non-abstract methods, while interfaces can only have abstract methods.
+A class can inherit from only one abstract class, but it can implement multiple interfaces.
+Abstract classes can have constructors, while interfaces cannot.
+Abstract classes can have instance variables, while interfaces cannot.
+What are the access modifiers in Java? Explain their differences.
+Answer: There are four access modifiers in Java:
+
+Public: The member can be accessed from anywhere.
+Protected: The member is accessible within the same package and subclasses.
+Default (no modifier): The member is accessible within the same package.
+Private: The member is accessible only within the same class.
+What is the difference between checked and unchecked exceptions in Java?
+Answer:
+
+Checked Exceptions: These are exceptions that are checked at compile-time. Methods that can throw checked exceptions must declare them in their method signature or handle them using try-catch blocks.
+Unchecked Exceptions: These are exceptions that are not checked at compile-time. They usually arise from programming errors such as null pointer dereferences or arithmetic overflows. Methods are not required to declare or handle unchecked exceptions.
+What is the difference between the "==" operator and the equals() method in Java?
+Answer:
+
+The "==" operator compares object references, checking if two references point to the same memory location.
+The equals() method is used to compare the content or values of objects. It is typically overridden in classes to provide a custom equality check.
+These are just a few examples of Java interview questions along with their answers. Remember to understand the concepts behind the answers and practice coding to gain confidence for your interview.
+<!==================================================================================================================>
+
+SALE
+
+LIVE
+
+NOW
+
+Summer Challenge + 50% Off PRO
+Earn Special Summer Certification and Unique Digital Badges. 
+Enroll Now!
+Programiz
+Courses
+Tutorials
+Examples
+
+Search tutorials & examples
+Try PRO for FREE
+
+Learn Java Interactively
+Java Introduction
+Java Hello World
+Java JVM, JRE and JDK
+Java Variables and Literals
+Java Data Types
+Java Operators
+Java Input and Output
+Java Expressions & Blocks
+Java Comment
+Java Flow Control
+Java Arrays
+Java OOP (I)
+Java OOP (II)
+Java OOP (III)
+Java Exception Handling
+Java List
+Java Queue
+Java Map
+Java Set
+Java I/O Streams
+Java Reader/Writer
+Additional Topics
+
+
+
+
+Java Tutorials
+Java Operator Precedence
+Java Ternary Operator
+Java Bitwise and Shift Operators
+Java instanceof Operator
+Java if...else Statement
+Java for Loop
+
+
+
+Java Operators
+In this tutorial, you'll learn about different types of operators in Java, their syntax and how to use them with the help of examples.
+
+Operators are symbols that perform operations on variables and values. For example, + is an operator used for addition, while * is also an operator used for multiplication.
+
+Operators in Java can be classified into 5 types:
+
+Arithmetic Operators
+Assignment Operators
+Relational Operators
+Logical Operators
+Unary Operators
+Bitwise Operators
+1. Java Arithmetic Operators
+Arithmetic operators are used to perform arithmetic operations on variables and data. For example,
+
+a + b;
+Here, the + operator is used to add two variables a and b. Similarly, there are various other arithmetic operators in Java.
+
+Operator	Operation
++	Addition
+-	Subtraction
+*	Multiplication
+/	Division
+%	Modulo Operation (Remainder after division)
+Example 1: Arithmetic Operators
+class Main {
+  public static void main(String[] args) {
+    
+    // declare variables
+    int a = 12, b = 5;
+
+    // addition operator
+    System.out.println("a + b = " + (a + b));
+
+    // subtraction operator
+    System.out.println("a - b = " + (a - b));
+
+    // multiplication operator
+    System.out.println("a * b = " + (a * b));
+
+    // division operator
+    System.out.println("a / b = " + (a / b));
+
+    // modulo operator
+    System.out.println("a % b = " + (a % b));
+  }
+}
+Run Code
+Output
+
+a + b = 17
+a - b = 7 
+a * b = 60
+a / b = 2 
+a % b = 2 
+In the above example, we have used +, -, and * operators to compute addition, subtraction, and multiplication operations.
+
+/ Division Operator
+
+Note the operation, a / b in our program. The / operator is the division operator.
+
+If we use the division operator with two integers, then the resulting quotient will also be an integer. And, if one of the operands is a floating-point number, we will get the result will also be in floating-point.
+
+In Java,
+
+(9 / 2) is 4
+(9.0 / 2) is 4.5
+(9 / 2.0) is 4.5
+(9.0 / 2.0) is 4.5
+% Modulo Operator
+
+The modulo operator % computes the remainder. When a = 7 is divided by b = 4, the remainder is 3.
+
+Note: The % operator is mainly used with integers.
+
+2. Java Assignment Operators
+Assignment operators are used in Java to assign values to variables. For example,
+
+int age;
+age = 5;
+Here, = is the assignment operator. It assigns the value on its right to the variable on its left. That is, 5 is assigned to the variable age.
+
+Let's see some more assignment operators available in Java.
+
+Operator	Example	Equivalent to
+=	a = b;	a = b;
++=	a += b;	a = a + b;
+-=	a -= b;	a = a - b;
+*=	a *= b;	a = a * b;
+/=	a /= b;	a = a / b;
+%=	a %= b;	a = a % b;
+Example 2: Assignment Operators
+class Main {
+  public static void main(String[] args) {
+    
+    // create variables
+    int a = 4;
+    int var;
+
+    // assign value using =
+    var = a;
+    System.out.println("var using =: " + var);
+
+    // assign value using =+
+    var += a;
+    System.out.println("var using +=: " + var);
+
+    // assign value using =*
+    var *= a;
+    System.out.println("var using *=: " + var);
+  }
+}
+Run Code
+Output
+
+var using =: 4
+var using +=: 8 
+var using *=: 32
+3. Java Relational Operators
+Relational operators are used to check the relationship between two operands. For example,
+
+// check if a is less than b
+a < b;
+Here, < operator is the relational operator. It checks if a is less than b or not.
+
+It returns either true or false.
+
+Operator	Description	Example
+==	Is Equal To	3 == 5 returns false
+!=	Not Equal To	3 != 5 returns true
+>	Greater Than	3 > 5 returns false
+<	Less Than	3 < 5 returns true
+>=	Greater Than or Equal To	3 >= 5 returns false
+<=	Less Than or Equal To	3 <= 5 returns true
+Example 3: Relational Operators
+class Main {
+  public static void main(String[] args) {
+    
+    // create variables
+    int a = 7, b = 11;
+
+    // value of a and b
+    System.out.println("a is " + a + " and b is " + b);
+
+    // == operator
+    System.out.println(a == b);  // false
+
+    // != operator
+    System.out.println(a != b);  // true
+
+    // > operator
+    System.out.println(a > b);  // false
+
+    // < operator
+    System.out.println(a < b);  // true
+
+    // >= operator
+    System.out.println(a >= b);  // false
+
+    // <= operator
+    System.out.println(a <= b);  // true
+  }
+}
+Run Code
+Note: Relational operators are used in decision making and loops.
+
+4. Java Logical Operators
+Logical operators are used to check whether an expression is true or false. They are used in decision making.
+
+Operator	Example	Meaning
+&& (Logical AND)	expression1 && expression2	true only if both expression1 and expression2 are true
+|| (Logical OR)	expression1 || expression2	true if either expression1 or expression2 is true
+! (Logical NOT)	!expression	true if expression is false and vice versa
+Example 4: Logical Operators
+class Main {
+  public static void main(String[] args) {
+
+    // && operator
+    System.out.println((5 > 3) && (8 > 5));  // true
+    System.out.println((5 > 3) && (8 < 5));  // false
+
+    // || operator
+    System.out.println((5 < 3) || (8 > 5));  // true
+    System.out.println((5 > 3) || (8 < 5));  // true
+    System.out.println((5 < 3) || (8 < 5));  // false
+
+    // ! operator
+    System.out.println(!(5 == 3));  // true
+    System.out.println(!(5 > 3));  // false
+  }
+}
+Run Code
+Working of Program
+
+(5 > 3) && (8 > 5) returns true because both (5 > 3) and (8 > 5) are true.
+(5 > 3) && (8 < 5) returns false because the expression (8 < 5) is false.
+(5 < 3) || (8 > 5) returns true because the expression (8 > 5) is true.
+(5 > 3) || (8 < 5) returns true because the expression (5 > 3) is true.
+(5 < 3) || (8 < 5) returns false because both (5 < 3) and (8 < 5) are false.
+!(5 == 3) returns true because 5 == 3 is false.
+!(5 > 3) returns false because 5 > 3 is true.
+5. Java Unary Operators
+Unary operators are used with only one operand. For example, ++ is a unary operator that increases the value of a variable by 1. That is, ++5 will return 6.
+
+Different types of unary operators are:
+
+Operator	Meaning
++	Unary plus: not necessary to use since numbers are positive without using it
+-	Unary minus: inverts the sign of an expression
+++	Increment operator: increments value by 1
+--	Decrement operator: decrements value by 1
+!	Logical complement operator: inverts the value of a boolean
+Increment and Decrement Operators
+Java also provides increment and decrement operators: ++ and -- respectively. ++ increases the value of the operand by 1, while -- decrease it by 1. For example,
+
+int num = 5;
+
+// increase num by 1
+++num;
+Here, the value of num gets increased to 6 from its initial value of 5.
+
+Example 5: Increment and Decrement Operators
+class Main {
+  public static void main(String[] args) {
+    
+    // declare variables
+    int a = 12, b = 12;
+    int result1, result2;
+
+    // original value
+    System.out.println("Value of a: " + a);
+
+    // increment operator
+    result1 = ++a;
+    System.out.println("After increment: " + result1);
+
+    System.out.println("Value of b: " + b);
+
+    // decrement operator
+    result2 = --b;
+    System.out.println("After decrement: " + result2);
+  }
+}
+Run Code
+Output
+
+Value of a: 12
+After increment: 13
+Value of b: 12     
+After decrement: 11
+In the above program, we have used the ++ and -- operator as prefixes (++a, --b). We can also use these operators as postfix (a++, b++).
+
+There is a slight difference when these operators are used as prefix versus when they are used as a postfix.
+
+To learn more about these operators, visit increment and decrement operators.
+
+6. Java Bitwise Operators
+Bitwise operators in Java are used to perform operations on individual bits. For example,
+
+Bitwise complement Operation of 35
+
+35 = 00100011 (In Binary)
+
+~ 00100011 
+  ________
+   11011100  = 220 (In decimal)
+Here, ~ is a bitwise operator. It inverts the value of each bit (0 to 1 and 1 to 0).
+
+The various bitwise operators present in Java are:
+
+Operator	Description
+~	Bitwise Complement
+<<	Left Shift
+>>	Right Shift
+>>>	Unsigned Right Shift
+&	Bitwise AND
+^	Bitwise exclusive OR
+These operators are not generally used in Java. To learn more, visit Java Bitwise and Bit Shift Operators.
+
+Other operators
+Besides these operators, there are other additional operators in Java.
+
+Java instanceof Operator
+The instanceof operator checks whether an object is an instanceof a particular class. For example,
+
+class Main {
+  public static void main(String[] args) {
+
+    String str = "Programiz";
+    boolean result;
+
+    // checks if str is an instance of
+    // the String class
+    result = str instanceof String;
+    System.out.println("Is str an object of String? " + result);
+  }
+}
+Run Code
+Output
+
+Is str an object of String? true
+Here, str is an instance of the String class. Hence, the instanceof operator returns true. To learn more, visit Java instanceof.
+
+Java Ternary Operator
+The ternary operator (conditional operator) is shorthand for the if-then-else statement. For example,
+
+variable = Expression ? expression1 : expression2
+Here's how it works.
+
+If the Expression is true, expression1 is assigned to the variable.
+If the Expression is false, expression2 is assigned to the variable.
+Let's see an example of a ternary operator.
+
+class Java {
+  public static void main(String[] args) {
+
+    int februaryDays = 29;
+    String result;
+
+    // ternary operator
+    result = (februaryDays == 28) ? "Not a leap year" : "Leap year";
+    System.out.println(result);
+  }
+}
+Run Code
+Output
+
+Leap year
+In the above example, we have used the ternary operator to check if the year is a leap year or not. To learn more, visit the Java ternary operator.
+
+Now that you know about Java operators, it's time to know about the order in which operators are evaluated. To learn more, visit Java Operator Precedence.
+
+<!!!!!============================================================================================================>
+Skip to content
+Java Concept Of The Day
+TUTORIALS
+QUIZ
+400+ INTERVIEW QUESTIONS
+110+ INTERVIEW PROGRAMS
+35+ CONCEPTS COMPARISON
+
+How To Create Pyramid Of Numbers In Java?
+pramodbabladPRAMODBABLADJULY 26, 2015JAVA INTERVIEW PROGRAMS136 COMMENTS
+How To Create Pyramid Of Numbers In Java?
+This is one of the frequently asked java interview question for freshers. This question tests the candidate’s logical ability as well as the basic understanding of Java language. They can ask you to create pyramid of numbers with different patterns like in the below image.
+
+
+pyramid of numbers
+In this post, we will try to write the java programs to create pyramid of numbers in all different patterns.
+
+Pattern 1 : Write java program to create pyramid of numbers like in Pattern1 of the above image?
+
+Take the input from the user and assign it to noOfRows. This will be the number of rows he wants in a pyramid. Define one variable called rowCount and initialize it to 1. This will hold the value of current row count. At the beginning of each row, we print ‘i’ spaces where ‘i’ will be value from noOfRows to 1. At the end of each row, we print rowCount value rowCount times. i.e in the first row, 1 will be printed once. In the second row, 2 will be printed twice and so on. Below is the java code which implements this logic.
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+import java.util.Scanner;
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+ 
+        //Taking noOfRows value from the user
+ 
+        System.out.println("How Many Rows You Want In Your Pyramid?");
+ 
+        int noOfRows = sc.nextInt();
+ 
+        //Initializing rowCount with 1
+ 
+        int rowCount = 1;
+ 
+        System.out.println("Here Is Your Pyramid");
+ 
+        //Implementing the logic
+ 
+        for (int i = noOfRows; i > 0; i--)
+        {
+            //Printing i spaces at the beginning of each row
+ 
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print(" ");
+            }
+ 
+            //Printing 'rowCount' value 'rowCount' times at the end of each row
+ 
+            for (int j = 1; j <= rowCount; j++)
+            {
+                System.out.print(rowCount+" ");
+            }
+ 
+            System.out.println();
+ 
+            //Incrementing the rowCount
+ 
+            rowCount++;
+        }
+    }
+}
+Output :
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+How Many Rows You Want In Your Pyramid?
+9
+Here Is Your Pyramid
+         1
+        2 2
+       3 3 3
+      4 4 4 4
+     5 5 5 5 5
+    6 6 6 6 6 6
+   7 7 7 7 7 7 7
+  8 8 8 8 8 8 8 8
+ 9 9 9 9 9 9 9 9 9
+[quads id=5]
+
+Pattern 2 : How to create pyramid of numbers in Java like in Pattern2 of the above image?
+
+In this pattern also, we use same logic but instead of printing rowCount value rowCount times at the end of each row, we print ‘j’ where j value will be from 1 to rowCount.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+import java.util.Scanner;
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+ 
+        //Taking noOfRows value from the user
+ 
+        System.out.println("How Many Rows You Want In Your Pyramid?");
+ 
+        int noOfRows = sc.nextInt();
+ 
+        //Initializing rowCount with 1
+ 
+        int rowCount = 1;
+ 
+        System.out.println("Here Is Your Pyramid");
+ 
+        //Implementing the logic
+ 
+        for (int i = noOfRows; i > 0; i--)
+        {
+            //Printing i spaces at the beginning of each row
+ 
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print(" ");
+            }
+ 
+            //Printing 'j' value at the end of each row
+ 
+            for (int j = 1; j <= rowCount; j++)
+            {
+                System.out.print(j+" ");
+            }
+ 
+            System.out.println();
+ 
+            //Incrementing the rowCount
+ 
+            rowCount++;
+        }
+    }
+}
+Output :
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+How Many Rows You Want In Your Pyramid?
+9
+Here Is Your Pyramid
+         1
+        1 2
+       1 2 3
+      1 2 3 4
+     1 2 3 4 5
+    1 2 3 4 5 6
+   1 2 3 4 5 6 7
+  1 2 3 4 5 6 7 8
+ 1 2 3 4 5 6 7 8 9
+Pattern 3 : Write a java program to create pyramid of stars(*) like in the Pattern3 of the above image?
+
+The same logic is used here also. But, instead of printing rowCount or j value at the end of each row, we print star(*).
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+import java.util.Scanner;
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+ 
+        //Taking noOfRows value from the user
+ 
+        System.out.println("How Many Rows You Want In Your Pyramid?");
+ 
+        int noOfRows = sc.nextInt();
+ 
+        //Initializing rowCount with 1
+ 
+        int rowCount = 1;
+ 
+        System.out.println("Here Is Your Pyramid");
+ 
+        //Implementing the logic
+ 
+        for (int i = noOfRows; i > 0; i--)
+        {
+            //Printing i spaces at the beginning of each row
+ 
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print(" ");
+            }
+ 
+            //Printing * at the end of each row
+ 
+            for (int j = 1; j <= rowCount; j++)
+            {
+                System.out.print("* ");
+            }
+ 
+            System.out.println();
+ 
+            //Incrementing the rowCount
+ 
+            rowCount++;
+        }
+    }
+}
+Output :
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+How Many Rows You Want In Your Pyramid?
+9
+Here Is Your Pyramid
+         *
+        * *
+       * * *
+      * * * *
+     * * * * *
+    * * * * * *
+   * * * * * * *
+  * * * * * * * *
+ * * * * * * * * *
+Pattern 4 : Write java program to print pyramid of numbers like in the Pattern4 of the above image?
+
+In this problem, we print i*2 spaces at the beginning of each row instead of just i spaces. At the end of each row, we print ‘j’ where j value will be from 1 to rowCount and from rowCount-1 to 1.
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+import java.util.Scanner;
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+ 
+        //Taking noOfRows value from the user
+ 
+        System.out.println("How Many Rows You Want In Your Pyramid?");
+ 
+        int noOfRows = sc.nextInt();
+ 
+        //Initializing rowCount with 1
+ 
+        int rowCount = 1;
+ 
+        System.out.println("Here Is Your Pyramid");
+ 
+        //Implementing the logic
+ 
+        for (int i = noOfRows; i > 0; i--)
+        {
+            //Printing i*2 spaces at the beginning of each row
+ 
+            for (int j = 1; j <= i*2; j++)
+            {
+                System.out.print(" ");
+            }
+ 
+            //Printing j value where j value will be from 1 to rowCount
+ 
+            for (int j = 1; j <= rowCount; j++)          
+            {
+                System.out.print(j+" ");
+            }
+ 
+            //Printing j value where j value will be from rowCount-1 to 1
+             
+            for (int j = rowCount-1; j >= 1; j--)
+            {               
+                System.out.print(j+" ");            
+            }                       
+             
+            System.out.println();
+ 
+            //Incrementing the rowCount
+ 
+            rowCount++;
+        }
+    }
+}
+Output :
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+How Many Rows You Want In Your Pyramid?
+9
+Here Is Your Pyramid
+                  1
+                1 2 1
+              1 2 3 2 1
+            1 2 3 4 3 2 1
+          1 2 3 4 5 4 3 2 1
+        1 2 3 4 5 6 5 4 3 2 1
+      1 2 3 4 5 6 7 6 5 4 3 2 1
+    1 2 3 4 5 6 7 8 7 6 5 4 3 2 1
+  1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2 1
+Pattern 5 : Write Java program to print reverse pyramid of numbers like in the Pattern5 of the above image?
+
+In this problem, we iterate outer loop in the reverse order i.e from 1 to noOfRows and initialize the rowCount to noOfRows.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+import java.util.Scanner;
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+ 
+        //Taking noOfRows value from the user
+ 
+        System.out.println("How Many Rows You Want In Your Pyramid?");
+ 
+        int noOfRows = sc.nextInt();
+ 
+        //Initializing rowCount with noOfRows
+ 
+        int rowCount = noOfRows;
+ 
+        System.out.println("Here Is Your Pyramid");
+ 
+        //Implementing the logic
+ 
+        for (int i = 0; i < noOfRows; i++)
+        {
+            //Printing i*2 spaces at the beginning of each row
+ 
+            for (int j = 1; j <= i*2; j++)
+            {
+                System.out.print(" ");
+            }
+ 
+            //Printing j where j value will be from 1 to rowCount
+ 
+            for (int j = 1; j <= rowCount; j++)          
+            {
+                System.out.print(j+" ");
+            }
+ 
+            //Printing j where j value will be from rowCount-1 to 1
+             
+            for (int j = rowCount-1; j >= 1; j--)
+            {               
+                System.out.print(j+" ");            
+            }
+             
+            System.out.println();
+ 
+            //Decrementing the rowCount
+ 
+            rowCount--;
+        }
+    }
+}
+Output :
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+How Many Rows You Want In Your Pyramid?
+9
+Here Is Your Pyramid
+1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2 1
+  1 2 3 4 5 6 7 8 7 6 5 4 3 2 1
+    1 2 3 4 5 6 7 6 5 4 3 2 1
+      1 2 3 4 5 6 5 4 3 2 1
+        1 2 3 4 5 4 3 2 1
+          1 2 3 4 3 2 1
+            1 2 3 2 1
+              1 2 1
+                1
+Pattern 6 : How do you create pyramid of numbers like in the Pattern6 of the above image?
+
+In this problem, at the end of each row we print ‘j’ where ‘j’ value will be from i to noOfRows and from noOfRows-1 to i.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+import java.util.Scanner;
+ 
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+ 
+        //Taking noOfRows value from the user
+ 
+        System.out.println("How Many Rows You Want In Your Pyramid?");
+ 
+        int noOfRows = sc.nextInt();
+ 
+        //Initializing rowCount with 1
+ 
+        int rowCount = 1;
+ 
+        System.out.println("Here Is Your Pyramid");
+ 
+        //Implementing the logic
+ 
+        for (int i = noOfRows; i >= 1; i--)
+        {
+            //Printing i*2 spaces at the beginning of each row
+ 
+            for (int j = 1; j <= i*2; j++)
+            {
+                System.out.print(" ");
+            }
+ 
+            //Printing j where j value will be from i to noOfRows
+ 
+            for (int j = i; j <= noOfRows; j++)          
+            {
+                System.out.print(j+" ");
+            }
+ 
+            //Printing j where j value will be from noOfRows-1 to i
+             
+            for (int j = noOfRows-1; j >= i; j--)
+            {               
+                System.out.print(j+" ");            
+            }
+             
+            System.out.println();
+ 
+            //Incrementing the rowCount
+ 
+            rowCount++;
+        }
+    }
+}
+Output :
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+How Many Rows You Want In Your Pyramid?
+9
+Here Is Your Pyramid
+                  9
+                8 9 8
+              7 8 9 8 7
+            6 7 8 9 8 7 6
+          5 6 7 8 9 8 7 6 5
+        4 5 6 7 8 9 8 7 6 5 4
+      3 4 5 6 7 8 9 8 7 6 5 4 3
+    2 3 4 5 6 7 8 9 8 7 6 5 4 3 2
+  1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2 1
+Click to share on Twitter (Opens in new window)Click to share on Facebook (Opens in new window)Click to share on LinkedIn (Opens in new window)Click to share on Reddit (Opens in new window)Click to share on Pinterest (Opens in new window)Click to share on WhatsApp (Opens in new window)More
+
+
+PREVIOUS POST
+What Are Access And Non-Access Modifiers In Java?
+NEXT POST
+How To Remove Duplicate Elements From ArrayList In Java?
+Type your email…
+Type your email…
+
+
+
+Related Posts :
+Diamond Pattern Program In Java
+Diamond Pattern Program In Java
+40+ Number Pattern Programs In Java
+40+ Number Pattern Programs In Java
+110+ Popular Java Interview Programs With Solutions
+110+ Popular Java Interview Programs With Solutions
+Palindrome Program In Java
+Palindrome Program In Java
+10 Prime Number Programs In Java
+10 Prime Number Programs In Java
+How To Find Second Largest Number In An Integer Array?
+How To Find Second Largest Number In An Integer Array?
+Pronic Number Program In Java
+Pronic Number Program In Java
+How To Generate Random Numbers In Java?
+How To Generate Random Numbers In Java?
+Disarium Number Program In Java
+Disarium Number Program In Java
+How To Create Spiral Of Numbers (Spiral Matrix) In Java?
+How To Create Spiral Of Numbers (Spiral Matrix) In Java?
+Related Posts
+110+ Java Interview Programs With Solutions
+May 16, 202341 Comments
+Magic Number Program In Java
+February 24, 2021
+How To Find Array Triplets With Sum Of Two Elements Equals Third?
+October 28, 2020
+136 Comments
+jagadeesh
+JULY 27, 2015 / 5:31 AM
+REPLY
+very good example send me some more examples above email
+
+jagan
+JULY 27, 2015 / 5:33 PM
+REPLY
+very nice and good to understand all the concepts very easily teet by teet and beat by beat
+
+Niroshan.M
+JULY 30, 2015 / 10:25 AM
+REPLY
+The 4 program of the liSt in the page the second for loop is not work correctly please explain the second system.out.print (j+ ” “)
+
+DixThor
+NOVEMBER 28, 2015 / 12:48 AM
+REPLY
+it prints the value of J and the number of characters to be skipped
+
+HEMALATHA
+AUGUST 6, 2018 / 11:13 AM
+REPLY
+did u get the answer
+
+Niroshan.M
+JULY 30, 2015 / 10:39 AM
+REPLY
+It’s awesome it’s a great useful idea thanks
+
+Rajani kant
+JULY 31, 2015 / 2:57 PM
+REPLY
+Can you please help me to solve this problem
+input:
+i=1,n=4
+output:
+1 1 1 1
+1 1 1 2
+1 1 2
+1 2 1
+2 2
+
+HEMALATHA
+AUGUST 6, 2018 / 11:26 AM
+REPLY
+class Pattern22
+{
+public static void main(String args[])
+{
+int num=4;
+int temp=num;
+for(int i=0;i<=num;i++)
+{
+for(int k=1;k<=temp;k++)
+{
+System.out.print(1);
+}
+if(i!=0)
+{
+System.out.print(2);
+}
+if(i==4)
+{
+System.out.print(2);
+}
+System.out.println();
+temp–;
+}
+}
+}
+
+BBIT Class
+SEPTEMBER 21, 2015 / 4:56 AM
+REPLY
+This is wonderfull. please be sending some of this things to my email.
+Thank you
+
+Ram Pravesh Yadav
+SEPTEMBER 24, 2015 / 11:02 AM
+REPLY
+Thanks , and sending this types of examples
+
+Carlos
+OCTOBER 21, 2015 / 11:09 AM
+REPLY
+Java was exciting for me (10 years ago).
+
+My new solution:
+
+def newpyramid(level):
+def pyramid():
+for x in range(1,level+1):
+print ” “*(level-x), (str(x)+” “)*x
+return pyramid
+
+mypyramid = newpyramid(9);
+mypyramid()
+
+bala
+OCTOBER 23, 2015 / 4:06 PM
+REPLY
+Awesome Post Sir Very clean explanation.thanks for sharing the article
+
+chanaiah
+NOVEMBER 4, 2015 / 1:28 PM
+REPLY
+Very nice explanation Sir..
+
+Sohaib Ahmed
+NOVEMBER 15, 2015 / 3:44 PM
+REPLY
+how will i get the pattren 6 in
+1
+212
+32123
+4321234
+543212345
+65432123456
+
+Sundeep
+DECEMBER 10, 2015 / 8:47 AM
+REPLY
+import java.util.Scanner;
+public class Challenge {
+public static void main(String args[])
+{
+int i,j,k,count,nextint=1;
+Scanner num=new Scanner(System.in);
+count=num.nextInt();
+for(i=count;i>0;i–)
+{
+for(j=1;j0;j–)
+{
+System.out.print(j + ” “);
+
+}
+for(k=2;k<=nextint;k++)
+{
+System.out.print(k + " " );
+}
+
+nextint++;
+
+System.out.println();
+}
+
+}
+
+}
+
+Nitesh Kumar Ray
+MARCH 14, 2018 / 2:42 PM
+REPLY
+public static void main(String args[])
+{
+int row=1;
+for(int i=1;i=1;j–)
+{
+System.out.print(j);
+}
+for(int k=2;k<=i;k++)
+{
+System.out.print(k);
+}
+System.out.print("\n");
+row++;
+}
+}
+
+anushka
+APRIL 6, 2018 / 2:00 PM
+REPLY
+/*
+1
+2 1 2
+3 2 1 2 3
+4 3 2 1 2 3 4
+5 4 3 2 1 2 3 4 5
+*/
+class Pattren7
+{
+public static void main(int n)
+{
+int i, j, k, l, p = n;
+for(i=1; i<=5; i++)
+{
+for(k=1; k=1; j–)
+System.out.print(j);
+for(l=2; l<=i; l++)
+System.out.print(l);
+System.out.println();
+}
+}
+}
+
+Sohaib Ahmed
+NOVEMBER 15, 2015 / 3:49 PM
+REPLY
+1
+2 1 2
+3 2 1 2 3
+4 3 2 1 2 3 4
+5 4 3 2 1 2 3 4 5
+
+praveen kumar
+JULY 31, 2016 / 11:33 AM
+REPLY
+class no
+{
+public static void main(String ar[])
+{
+int l,s,no;
+for(l=1;l<=5;l++)
+{
+no=l;
+for(s=1;s<=2*l-1;s++)
+{
+System.out.print(no);
+if(s<l)
+{
+no–;
+}
+else
+{
+no++;
+}
+}
+System.out.println();
+}
+}
+}
+
+akanksha
+APRIL 6, 2018 / 2:02 PM
+REPLY
+/*
+1
+2 1 2
+3 2 1 2 3
+4 3 2 1 2 3 4
+5 4 3 2 1 2 3 4 5
+*/
+class Pattren7
+{
+public static void main(int n)
+{
+int i, j, k, l, p = n;
+for(i=1; i<=5; i++)
+{
+for(k=1; k=1; j–)
+System.out.print(j);
+for(l=2; l<=i; l++)
+System.out.print(l);
+System.out.println();
+}
+}
+}
+
+RV
+AUGUST 24, 2018 / 3:12 PM
+REPLY
+IT WILL WORK OR NOT
+
+ranjan kumar rai
+NOVEMBER 23, 2015 / 3:26 PM
+REPLY
+how to print
+1
+2 6
+3 7 10
+4 8 11 13
+5 9 12 14 15
+
+Sundeep
+DECEMBER 10, 2015 / 10:13 AM
+REPLY
+import java.util.Scanner;
+public class Challenge2{
+public static void main(String args[])
+{
+int i,j,k;
+int rows=5;
+for( i=1;i<=rows;i++)
+{
+k=i;
+for(j=1;j<=i;j++)
+{
+System.out.print(k);
+k=k+rows-j;
+}
+System.out.println();
+
+}
+}
+}
+
+ABHAY
+MAY 20, 2017 / 4:21 AM
+REPLY
+import java.util.Scanner;
+class Pat
+{
+public static void main(String g[])
+{ Scanner s= new Scanner(System.in);
+System.out.print(“Enter the no of Rows :”);
+int r=s.nextInt();
+
+for (int i=1;i1;j–)
+{
+l=l+k ;
+System.out.print(” “+l);
+k–;
+}
+System.out.println();
+
+}
+}
+}
+
+ABHAY KUMAR
+MAY 20, 2017 / 4:36 AM
+REPLY
+import java.util.Scanner;
+class Pat
+{
+public static void main(String g[])
+{ Scanner s= new Scanner(System.in);
+System.out.print (“Enter the no of Rows :”);
+int r=s.nextInt();
+
+for (int i=1;i1;j–)
+{
+l=l+k ;
+System.out.print(” “+l);
+k–;
+}
+System.out.println();
+}
+}
+}
+
+bh@vin
+JANUARY 5, 2016 / 7:34 AM
+REPLY
+can you hepl me to print this
+*
+* *
+* * *
+* * * *
+* * * * *
+
+P.Bala Athirstalakshmi
+JULY 11, 2016 / 11:29 AM
+REPLY
+import java.lang.*;
+Class Star
+{
+Public static void main(String args[])
+{
+for(int i=1;i>5;i++)
+{
+for(int j=1;j<=i;j++)
+{
+System.out.println(" * ");
+}
+System.out.print();
+}
+}
+}
+
+nagender
+JULY 31, 2016 / 5:22 AM
+REPLY
+Int i=0;i<5;i++
+{
+Int (j=0;j<i;j++)
+{
+Println("*");
+}
+}
+
+Koushik Reddy Namireddy
+SEPTEMBER 18, 2016 / 11:44 AM
+REPLY
+public class RightAngleTriangle {
+public static void main(String args[])
+{
+int nor=5,rowcount=1,i,j;
+System.out.println(“here is the pyramid..”);
+for(i=1;i<=nor;i++)
+{
+for(j=1;j<=i;j++)
+{
+System.out.print("*");
+}
+System.out.println(" ");
+}
+}
+}
+
+Koushik Reddy Namireddy
+SEPTEMBER 18, 2016 / 11:47 AM
+REPLY
+My Dream company is “Google”………
+public class RightAngleTriangle {
+public static void main(String args[])
+{
+int nor=5,rowcount=1,i,j;
+System.out.println(“here is the pyramid..”);
+for(i=1;i<=nor;i++)
+{
+for(j=1;j<=i;j++)
+{
+System.out.print("*");
+}
+System.out.println(" ");
+}
+}
+}
+
+Abhilash
+MAY 21, 2017 / 4:27 PM
+REPLY
+Hey its quite simple.
+class cls
+{
+void m()
+{
+for(int i=1;i<=;i++)
+{
+for(j=1;j<=i;j++)
+{
+System.out.print(*);
+}
+System.out.println();
+}
+}
+}
+
+rakesh kulkarni
+NOVEMBER 22, 2018 / 8:23 AM
+REPLY
+public class PatternBasic{
+public static void main(String args[]){
+int noOfRows = 3;
+for (int i = 0; i <= noOfRows; i++) {
+for (int j = 0; j <= i; j++) {
+System.out.print("*");
+}
+System.out.println();
+}
+}
+}
+
+aysha
+JANUARY 23, 2016 / 6:05 PM
+REPLY
+How to print
+12345
+2345
+345
+45
+5
+
+Pushpam
+MARCH 28, 2017 / 11:07 AM
+REPLY
+Public static void main(String args[]){
+Scanner s= new Scanner(System.in);
+Int I, J, count=0,row;
+System.out.println(enter the row count);
+Into row= S. Nextint();
+for(i=1;i<=row; i++){
+for(j=i;j<=row; j++){
+System.out.println(j+);
+}
+System.out.println();
+}
+}
+
+Sonu
+FEBRUARY 13, 2016 / 12:34 PM
+REPLY
+how to print
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+skonde
+MARCH 13, 2021 / 1:38 AM
+REPLY
+add counter before strt of for loop
+refer below python code
+a=1;
+for row in range(1,6):
+for col in range(1,row+1):
+
+print(a, end=” “)
+a += 1
+print()
+
+barry
+APRIL 3, 2016 / 3:33 AM
+REPLY
+if n= 7
+1 7 2 6 3 5 4 4 5 3 6 2 7 1
+what is the code?
+
+Vinay
+JUNE 2, 2017 / 6:57 AM
+REPLY
+public class PatternCode {
+
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+int i=1,j,n=7;
+j=n;
+for(int k=1;k<=n*2;k++){
+if(k%2==0){
+System.out.print(j+" ");
+j–;
+}
+else
+{
+System.out.print(i+" ");
+i++;
+}
+}
+
+}
+
+}
+
+Sumit
+APRIL 11, 2016 / 12:32 PM
+REPLY
+1
+12 1
+1 2 4 2 1
+1 2 4 8 4 2 1
+1 2 4 8 16 8 4 2 1
+1 2 4 8 16 32 16 8 4 2 1
+1 2 4 8 16 32 64 32 16 8 4 2 1
+1 2 4 8 16 32 64 128 64 32 16 8 4 2 1
+please share code for this pattern
+
+venkat
+APRIL 26, 2016 / 1:59 PM
+REPLY
+***************
+*
+*
+*
+*
+*
+*
+*************************
+please help me on print the characters in alphabet symbol “Z”
+
+Arun Kumar
+JULY 13, 2016 / 3:08 AM
+REPLY
+import java.util.*;
+public class Zprogram{
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+System.out.print(“Enter a number: “);
+int n = input.nextInt();
+for (int row = 0; row < n; row++) {
+for (int column = 0; column < n; column++) {
+if (row == 0 || row == n – 1 || column == n – 1 – row) {
+System.out.print(column+1);
+} else {
+System.out.print(" ");
+}
+}
+System.out.println();
+}
+}
+}
+
+yashika
+JUNE 15, 2016 / 4:39 AM
+REPLY
+how to print
+1
+1 2
+1 2 3
+1 2
+1
+
+pragnesh
+JUNE 19, 2016 / 10:37 AM
+REPLY
+how to print
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * * *
+* * * *
+* * *
+* *
+*
+
+PALLAVI SESANE
+JULY 3, 2016 / 12:16 PM
+REPLY
+pascal (using single printf())
+0
+1 2 1
+2 3 4 3 2
+3 4 5 6 5 4 3
+4 5 6 7 8 7 6 5 4
+5 6 7 8 9 0 9 8 7 6 5
+6 7 8 9 0 1 2 1 0 9 8 7 6
+7 8 9 0 1 2 3 4 3 2 1 0 9 8 7
+8 9 0 1 2 3 4 5 6 5 4 3 2 1 0 9 8
+9 0 1 2 3 4 5 6 7 8 7 6 5 4 3 2 1 0 9
+0 1 2 3 4 5 6 7 8 9 0 9 8 7 6 5 4 3 2 1 0
+9 0 1 2 3 4 5 6 7 8 7 6 5 4 3 2 1 0 9
+8 9 0 1 2 3 4 5 6 5 4 3 2 1 0 9 8
+7 8 9 0 1 2 3 4 3 2 1 0 9 8 7
+6 7 8 9 0 1 2 1 0 9 8 7 6
+5 6 7 8 9 0 9 8 7 6 5
+4 5 6 7 8 7 5 5 4
+3 4 5 6 5 4 3
+2 3 4 3 2
+1 2 1
+0
+
+How to solve please give me the logic and program in pascal
+Logic and write a program……
+
+MokshaBhargav Vanam
+OCTOBER 18, 2016 / 6:09 AM
+REPLY
+import java.util.*;
+public void Design4(int n){
+/*
+* 0
+* 1 2 1
+* 2 3 4 3 2
+* 3 4 5 6 5 4 3
+* 4 5 6 7 8 7 6 5 4
+* 5 6 7 8 9 0 9 8 7 6 5
+* 6 7 8 9 0 1 2 1 0 9 8 7 6
+* 7 8 9 0 1 2 3 4 3 2 1 0 9 8 7
+* 8 9 0 1 2 3 4 5 6 5 4 3 2 1 0 9 8
+* 9 0 1 2 3 4 5 6 7 8 7 6 5 4 3 2 1 0 9
+* 0 1 2 3 4 5 6 7 8 9 0 9 8 7 6 5 4 3 2 1 0
+* 9 0 1 2 3 4 5 6 7 8 7 6 5 4 3 2 1 0 9
+* 8 9 0 1 2 3 4 5 6 5 4 3 2 1 0 9 8
+* 7 8 9 0 1 2 3 4 3 2 1 0 9 8 7
+* 6 7 8 9 0 1 2 1 0 9 8 7 6
+* 5 6 7 8 9 0 9 8 7 6 5
+* 4 5 6 7 8 7 5 5 4
+* 3 4 5 6 5 4 3
+* 2 3 4 3 2
+* 1 2 1
+* 0
+* for input 10
+*/
+int i=0, j=0, k=0, m=0;
+for(i=0; i<=n; i++){
+for(j=m; j=m; k–){
+System.out.print(k%10+” “);
+}
+System.out.println();
+m++;
+}
+m = m-2;
+for(i=n-1; i>=0; i–){
+for(j=m; j=m; k–){
+System.out.print(k%10+” “);
+}
+System.out.println();
+m–;
+}
+}
+
+Zaw
+JULY 3, 2016 / 1:57 PM
+REPLY
+how to print
+
+*
+*
+* *
+* *
+* *
+*
+*
+
+Prabhu Christeena
+JULY 11, 2016 / 5:37 PM
+REPLY
+How to write a programming logic to generate pyramid shown
+*
+***
+***
+*****
+*****
+*****
+*******
+*******
+*******
+*******
+*********
+*********
+*********
+*********
+*********
+
+Shweta Pradeep Patil Patil
+JULY 29, 2016 / 12:35 PM
+REPLY
+need code for
+dentify the logic behind the series
+
+6 28 66 120 190 276….
+
+The numbers in the series should be used to create a Pyramid. The base of the Pyramid will be the widest and will start converging towards the top where there will only be one element. Each successive layer will have one number less than that on the layer below it. The width of the Pyramid is specified by an input parameter N. In other words there will be N numbers on the bottom layer of the pyramid.
+
+The Pyramid construction rules are as follows
+
+First number in the series should be at the top of the Pyramid
+Last N number of the series should be on the bottom-most layer of the Pyramid, with Nth number being the right-most number of this layer.
+Numbers less than 5-digits must be padded with zeroes to maintain the sanctity of a Pyramid when printed. Have a look at the examples below to get a pictorial understanding of what this rule actually means.
+
+Example
+
+If input is 2, output will be
+
+00006
+00028 00066
+
+If input is 3, output will be
+
+00006
+00028 00066
+00120 00190 00276
+
+Formal input and output specifications are stated below
+
+Yatin
+SEPTEMBER 23, 2016 / 2:31 PM
+REPLY
+import java.util.ArrayList;
+
+public class Pattern {
+
+public void drawPatternExample(int input) {
+
+int n = input;
+int totaldigit = 0;
+
+for (int i = 0; i < input; i++) {
+totaldigit = totaldigit + n;
+n–;
+}
+
+int x = 0;
+int output = 0;
+int fixedNum = 6;
+
+ArrayList arr = new ArrayList();
+for (int i = 0; i < totaldigit; i++) {
+output = output + ((16 * x) + fixedNum);
+arr.add(output);
+x++;
+}
+
+int m = 0;
+
+for (int i = 0; i < input; i++) {
+for (int j = 0; j <= i; j++) {
+System.out.print(arr.get(j + m) + " ");
+}
+
+m = m + i + 1;
+
+System.out.println("");
+}
+}
+public static void main(String[] args) {
+Pattern patt=new Pattern();
+patt.drawPatternExample(6);
+}
+}
+
+Zubair Ali
+JANUARY 18, 2017 / 4:41 AM
+REPLY
+I need help with this
+
+1******
+12*****
+123****
+1234***
+12345**
+123456*
+1234567
+
+Can you help me ?
+
+Try Smile
+JANUARY 25, 2017 / 3:56 AM
+REPLY
+Try this:
+
+import java.util.Scanner;
+public class Password {
+public static void main(String[] args){
+Scanner S = new Scanner(System.in);
+int Countrow =1;
+System.out.print(“Enter your number : “);
+int n = S.nextInt();
+for(int i=1; i<=n; i++){
+for(int j = 1 ; j<=Countrow; j++){
+System.out.print(j+"");
+}
+for(int j = Countrow+1; j<=n; j++){
+System.out.print("*");
+}
+System.out.println();
+Countrow++;
+}
+}
+}
+
+Ankit Vishnoi vISHNOI
+AUGUST 1, 2017 / 9:24 PM
+REPLY
+*##########
+#########**
+***########
+#######****
+*****######
+#####******
+*****######
+#######****
+***########
+#########**
+*##########
+
+moni
+SEPTEMBER 1, 2016 / 4:15 PM
+REPLY
+1
+2 *
+3 4 * *
+5 6 7 * * *
+
+akshta
+OCTOBER 7, 2016 / 4:16 PM
+REPLY
+*
+* 2
+* 2 *
+* 2 * 4
+* 2 * 4 * 6
+Plz code this program
+
+Vinay
+JUNE 2, 2017 / 7:14 AM
+REPLY
+/* *
+* 2
+* 2 *
+* 2 * 4
+* 2 * 4 * 6
+*/
+int n=10;
+for(int i=0;i<n;i++){
+int k=2;
+for(int j=0;j<=i;j++){
+if(j%2==0){
+System.out.print("* ");
+}
+else{
+System.out.print(k+" ");
+k+=2;
+}
+}
+System.out.println();
+}
+
+chandan
+OCTOBER 19, 2016 / 4:24 PM
+REPLY
+4*5*6
+3*2
+1
+
+Zubair Ali
+JANUARY 18, 2017 / 4:30 AM
+REPLY
+I need help with this
+
+1******
+12*****
+123****
+1234***
+12345**
+123456*
+1234567
+
+Can you help me ?
+
+Vinay
+JUNE 2, 2017 / 7:25 AM
+REPLY
+/*.
+1******
+12*****
+123****
+1234***
+12345**
+123456*
+1234567
+*/
+int n=7;
+for(int i=0;i<n;i++){
+int k=1;
+for(int j=0;j<n;j++){
+if(j<=i){
+System.out.print(k++);
+}
+else
+System.out.print("*");
+}
+System.out.println();
+}
+
+Shabana
+JANUARY 30, 2017 / 9:59 AM
+REPLY
+How we can create this :::::::
+1
+2 3
+4 5 6
+7 8 9 10
+
+Arcli8
+FEBRUARY 19, 2017 / 3:53 PM
+REPLY
+class program
+{
+public static void main()
+{
+int i,j,l=1;
+for(i=1;i<=10;i++)
+{
+for(j=1;j<=i;j++)
+{
+System.out.print(l++);
+}
+System.out.println();
+}
+}
+}
+
+Navneet Naman
+FEBRUARY 9, 2017 / 6:34 AM
+REPLY
+How we can do this: 1 6 2 10 7 3 13 11 8 4 15 14 12 9 5
+
+Mukul Chaudhari
+FEBRUARY 19, 2017 / 8:12 AM
+REPLY
+how can we write this program
+* &
+* & * &
+* & * & * &
+* & * & * & * &
+
+Vinay
+JUNE 2, 2017 / 10:49 AM
+REPLY
+* &
+* & * &
+* & * & * &
+
+for(int i=0;i=i;j++){
+if(j%2==0)
+System.out.print(“* “);
+else{
+System.out.print(“&”);
+k+=2;
+}
+}
+}
+
+sunitha
+MARCH 27, 2017 / 8:42 AM
+REPLY
+can you help me to do this
+
+* 1
+*** 3
+***** 5
+******* 7
+***** 5
+*** 3
+* 1
+
+Vinay
+JUNE 2, 2017 / 10:47 AM
+REPLY
+/*.
+* 1
+*** 3
+***** 5
+******* 7
+***** 5
+*** 3
+* 1
+
+*/
+int row=11;
+for(int i=1,k=0;k<row;k++)
+{
+if(k<=row/2)
+{
+for(int j=0;j<=i;j++)
+{
+if(j<i)
+System.out.print("* ");
+else
+System.out.print(i);
+
+}
+System.out.println();
+i=i+2;
+if(k==row/2)
+i=i-4;
+}
+
+else{
+
+for(int j=0;j<=i;j++)
+{
+if(j<i)
+System.out.print("* ");
+else
+System.out.print(i);
+}
+System.out.println();
+i=i-2;
+}
+
+}
+
+Sindhu
+APRIL 28, 2017 / 4:45 PM
+REPLY
+Could you please help me achieve this?
+
+*
+A A A
+B B B B B
+C C C C C C C
+* * * * * * * * *
+
+ajay
+MAY 15, 2017 / 10:01 AM
+REPLY
+how to print
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1
+
+Vinay
+JUNE 2, 2017 / 10:12 AM
+REPLY
+/*.
+
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1
+*/
+int m=1,f=11,n=5;
+for(int i=0;i<n;i++){
+if(i==0)
+System.out.print(m+" ");
+else
+{
+m=f*m;
+System.out.print(m+" ");
+}
+System.out.println();
+}
+
+Abhilash
+MAY 21, 2017 / 4:29 PM
+REPLY
+How to print this
+1
+2 3
+4 5 6
+7 8 9 10
+
+Vinay
+JUNE 2, 2017 / 7:31 AM
+REPLY
+/*.
+1
+2 3
+4 5 6
+7 8 9 10
+*/
+int row=4,n=1;
+for(int i=0;i<row;i++){
+for(int j=0;j<=i;j++){
+System.out.print(n++ +" ");
+}
+System.out.println();
+}
+
+nagendra
+JUNE 6, 2017 / 12:06 PM
+REPLY
+public class Pattern{
+
+public static void main(String []args){
+int count=9;
+for(int i=1;i<=count;i++){
+String formated = (i==count)?"":String.format("%"+(count-i)+"s"," ");
+String printed = new String(new char[i]).replace("\0", i+" ");
+System.out.println(formated+printed);
+}
+}
+}
+
+nagendra
+JUNE 6, 2017 / 12:07 PM
+REPLY
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+6 6 6 6 6 6
+7 7 7 7 7 7 7
+8 8 8 8 8 8 8 8
+9 9 9 9 9 9 9 9 9
+
+harish
+JUNE 6, 2017 / 5:10 PM
+REPLY
+*
+* *
+* *
+* *
+* * * * *
+
+harish
+JUNE 6, 2017 / 5:12 PM
+REPLY
+*
+* *
+* *
+* *
+* * * * *
+
+solution please
+
+Nagendra Kumar M
+JUNE 7, 2017 / 1:00 PM
+REPLY
+public class pattern2{
+
+public static void main(String []args){
+int count=9;
+String printed=””;
+for(int i=1;i<=count;i++){
+String formated = (i==count)?"":String.format("%"+(count-i)+"s"," ");
+//first pyramid
+/*String printed = new String(new char[i]).replace("\0", i+" ");*/
+printed = printed+new String(i+" ");
+System.out.println(formated+printed);
+}
+}
+}
+
+suvam
+JUNE 16, 2017 / 11:29 AM
+REPLY
+a
+a a
+a b a
+a b a
+a a
+a
+
+swap
+JUNE 30, 2017 / 2:38 PM
+REPLY
+hey how to print this output
+*
+# *
+# * #
+* # * #
+
+Neethu
+JULY 12, 2017 / 4:14 PM
+REPLY
+How to print ?
+1 3 5 7 9
+3 5 7 9
+5 7 9
+7 9
+9
+
+Neethu
+JULY 12, 2017 / 4:19 PM
+REPLY
+how to print
+1 3 5 7 9
+3 5 7 9
+5 7 9
+5 9
+9
+
+Holly
+JULY 20, 2017 / 2:43 PM
+REPLY
+Hey guys! I’m trying to figure out how to create a program that creates a small house based on the width and height that the user inputs: ie.
+Enter height of the house you want me to draw: 3
+Please enter an even number for the width of the house (must be odd numbers and bigger than 1): 5
+
+santosh
+JULY 26, 2017 / 5:28 AM
+REPLY
+How to print the below pattern using Java
+1
+3 5
+2 4 6
+7 9 11 13
+8 10 12 14 16
+
+naomi
+JULY 29, 2017 / 9:08 PM
+REPLY
+how to print the below one:
+1
+212
+32123
+4321234
+543212345
+
+naomi
+JULY 29, 2017 / 9:09 PM
+REPLY
+1
+212
+32123
+4321234
+543212345
+how to print this pattern
+
+Santhiya
+JULY 30, 2017 / 5:39 PM
+REPLY
+5 4 3 2 1
+4 3 2 1
+3 2 1
+2 1
+1
+
+Abi
+JULY 31, 2017 / 4:29 AM
+REPLY
+1
+212
+32123
+4321234
+543212345
+please share code for this pattern
+
+Abi
+JULY 31, 2017 / 4:32 AM
+REPLY
+*****1*****
+****212****
+***32123***
+**4321234**
+*543212345*
+please share code for this pattern
+
+Kshitij Jha
+AUGUST 10, 2017 / 4:07 PM
+REPLY
+hey abi its the code for your program
+1
+212
+32123..
+
+class program
+{
+public static void main(String args [])
+{
+for (int i=1;i<=5;i++)
+{
+for (sp=i;sp=1;j–)
+System.out.print(j);
+for(int k=2;k<=i;k++)
+System.out.print(k);
+}
+}
+}
+
+Kshitij Jha
+AUGUST 10, 2017 / 4:13 PM
+REPLY
+hey abi its the code for your program
+1
+212
+32123..
+sorry for there is a mistake in the 1st program
+
+class program
+{
+public static void main(String args [])
+{
+for (int i=1;i=1;j–)
+System.out.print(j);
+for(int k=2;k<=i;k++)
+System.out.print(k);
+}
+}
+}
+
+Kolipaka dileep Reddy
+AUGUST 30, 2017 / 5:28 AM
+REPLY
+Can you please provide prog for output
+N=3
+Output : 1
+2 4
+3 6 9
+
+Vani
+AUGUST 30, 2017 / 3:11 PM
+REPLY
+pls help me solve this one
+3 6 9 12
+15 18 21
+24 27
+30
+
+Vani
+AUGUST 30, 2017 / 3:12 PM
+REPLY
+3 6 9 12
+15 18 21
+24 27
+30
+
+rohit
+AUGUST 31, 2017 / 7:11 PM
+REPLY
+17*18*19*20
+14*15*16
+12*13
+11
+
+Dixter
+SEPTEMBER 1, 2017 / 10:58 AM
+REPLY
+how to print this, pls help me.
+10
+100
+1000
+10000
+100000
+1000000
+10000000
+100000000
+10000000000
+
+Dixter
+SEPTEMBER 1, 2017 / 10:59 AM
+REPLY
+in pyramid pattern.
+
+Suresh
+SEPTEMBER 4, 2017 / 6:16 AM
+REPLY
+public class NumPiramid{
+public static void main(String[] args){
+for(int i=0 ; i=0 ; x–){
+System.out.print(” “);
+}
+
+for(int y=0 ; y<(i+1) ; y++){
+System.out.print(i);
+
+if(y!=0){
+System.out.print(i);
+}
+
+}
+
+System.out.println("");
+}
+}
+}
+
+Suresh
+SEPTEMBER 4, 2017 / 6:19 AM
+REPLY
+public class NumPiramid{
+public static void main(String[] args){
+for(int i=0 ; i=0 ; x–){
+System.out.print(” “);
+}
+
+for(int y=0 ; y<(i+1) ; y++){
+System.out.print(i);
+
+if(y!=0){
+System.out.print(i);
+}
+
+}
+
+System.out.println("");
+
+}
+}
+}
+
+Shubham kumar
+SEPTEMBER 10, 2017 / 5:17 PM
+REPLY
+1
+1 2
+1 2 3
+1 2 3 4
+
+Rohit kumar
+SEPTEMBER 12, 2017 / 4:23 AM
+REPLY
+can anyone solve this…
+1
+21
+321
+4321
+54321
+
+pravin tandale
+SEPTEMBER 21, 2017 / 10:31 AM
+REPLY
+can i get pattern like this
+1
+2 3 2
+3 4 5 4 3
+4 5 6 7 6 5 4
+
+hana
+OCTOBER 18, 2017 / 4:25 PM
+REPLY
+*
+* * *
+*
+* * *
+help me with this
+
+David
+OCTOBER 19, 2017 / 2:34 PM
+REPLY
+Please : )
+
+1
+2 1 2
+3 2 1 2 3
+4 3 2 1 2 3 4
+5 4 3 2 1 2 3 4 5
+6 5 4 3 2 1 2 3 4 5 6
+7 6 5 4 3 2 1 2 3 4 5 6 7
+
+jakewilson
+OCTOBER 23, 2017 / 2:38 AM
+REPLY
+Enter the Limit: 5
+*** Patterns of Triangles
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+1
+2 1
+3 2 1
+4 3 2 1
+5 4 3 2 1
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+can someone help me with this?
+
+mrjava
+OCTOBER 23, 2017 / 2:39 AM
+REPLY
+Enter the Limit: 20
+*** Twin Prime Numbers up to 20
+(3,5),(5,7),(11,13),(17,19)
+
+can someone show me how to print twin prime numbers up to specified user input.
+
+James Witherspoon
+OCTOBER 23, 2017 / 8:57 PM
+REPLY
+1
+2 1 2
+3 2 1 2 3
+4 3 2 1 2 3 4
+5 4 3 2 1 2 3 4 5
+6 5 4 3 2 1 2 3 4 5 6
+7 6 5 4 3 2 1 2 3 4 5 6 7
+How can i print this pattern?
+
+James Witherspoon
+OCTOBER 25, 2017 / 1:42 AM
+REPLY
+How can i print pattern #6, but instead of 9 at top and counting down to 1 I want to start with 1 at top and counting to 9.
+
+peass
+NOVEMBER 10, 2017 / 5:04 AM
+REPLY
+0
+1 2
+2 3 4
+3 4 5 6
+4 5 6 7 8
+
+PLEASE
+
+Monir
+NOVEMBER 23, 2017 / 10:23 AM
+REPLY
+All examples are given above using a loop. Does it possible to draw the following pyramid without any loop? Of course, no a series of a print statement.
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3
+1 2
+1
+
+Merch Jay Dollaga
+NOVEMBER 25, 2017 / 1:17 AM
+REPLY
+how can you get output like this.
+3072
+48 64 <——- This was multiply to get 3072
+20 28 36
+8 12 16 20
+3 5 7 9 11
+1 2 3 4 5 6
+
+Reshmi
+DECEMBER 6, 2017 / 3:52 AM
+REPLY
+how could print
+0 1 2 3
+4 5 6
+7 8
+9
+
+Akshay kharmale
+FEBRUARY 8, 2018 / 3:02 PM
+REPLY
+2
+4 6
+8 10 12
+14 16 18 20
+
+how to print this pattern?
+
+Mohamed irshath
+MARCH 20, 2018 / 2:57 PM
+REPLY
+5 4 3 2 1
+4 3 2 1
+3 2 1
+2 1
+1
+please give me a program for ths
+
+akanksha
+APRIL 6, 2018 / 3:31 PM
+REPLY
+hello everyone
+I need to print the following:-
+1
+1 1
+1 1 1
+1 1 1 1
+1 1 1 1 1
+
+hdpolover
+APRIL 7, 2018 / 1:13 PM
+REPLY
+Hi! I’m still trying to figure out the code to create a pattern 4 pyramid with prime numbers. Could you help me with that?
+
+Rajorshi Ghosh
+APRIL 17, 2018 / 5:43 AM
+REPLY
+Can anyone solve me this?
+WAP TO ACCEPT A STRING AND FIND THE LONGEST WORD TO PRINT THE FOLLOWING PATTERN –
+INPUT – INTELLIGENCE PLUS CHARACTER IS EDUCATION
+OUTPUT – LONGEST ODD LENGTH WORD IS ‘CHARACTER’
+A
+RAC
+ARACT
+HARACTER
+CHARACTER
+
+Rajorshi Ghosh
+APRIL 17, 2018 / 5:45 AM
+REPLY
+Can anyone solve me this?
+WAP TO ACCEPT A STRING AND FIND THE LONGEST WORD TO PRINT THE FOLLOWING PATTERN –
+INPUT – INTELLIGENCE PLUS CHARACTER IS EDUCATION
+OUTPUT – LONGEST ODD LENGTH WORD IS ‘CHARACTER’
+b̶b̶b̶b̶b̶A
+b̶b̶b̶b̶RAC
+b̶b̶b̶ARACT
+b̶HARACTER
+CHARACTER
+
+zeke
+MAY 8, 2018 / 8:31 AM
+REPLY
+Can anyone help me with this one:
+
+Input Triangle ends:
+20
+0 2
+0 2 4
+0 2 4 6
+0 2 4 6 8
+0 2 4 6 8 10
+0 2 4 6 8 10 12
+0 2 4 6 8 10 12 14
+0 2 4 6 8 10 12 14 16
+0 2 4 6 8 10 12 14 16 18
+0 2 4 6 8 10 12 14 16 18 20
+
+Notes:
+1.only even numbers should be printed;
+2.in case of an entered odd number, display the even number before the entered number;
+3.accept only numbers. other input should display an error message
+
+zeke
+MAY 9, 2018 / 2:17 AM
+REPLY
+Can anyone help me with this?
+Input Triangle ends:
+20
+0 2
+0 2 4
+0 2 4 6
+0 2 4 6 8
+0 2 4 6 8 10
+0 2 4 6 8 10 12
+0 2 4 6 8 10 12 14
+0 2 4 6 8 10 12 14 16
+0 2 4 6 8 10 12 14 16 18
+0 2 4 6 8 10 12 14 16 18 20
+
+istopnoun
+MAY 9, 2018 / 9:25 AM
+REPLY
+Can you help me solve this
+
+Input Triangle ends:
+20
+0 2
+0 2 4
+0 2 4 6
+0 2 4 6 8
+0 2 4 6 8 10
+0 2 4 6 8 10 12
+0 2 4 6 8 10 12 14
+0 2 4 6 8 10 12 14 16
+0 2 4 6 8 10 12 14 16 18
+0 2 4 6 8 10 12 14 16 18 20
+
+ab shiney
+MAY 26, 2018 / 6:59 PM
+REPLY
+how to print
+*
+* * *
+* * * * *
+* * *
+*
+
+C PRASANNA VENKATESAN
+JUNE 18, 2018 / 2:46 PM
+REPLY
+How to write the following prgs using java?
+    1
+  2  4
+3  6  9
+============
+
+         1
+    1  2  3
+1  2  3  4  5
+   1  2  3
+        1
+
+C PRASANNA VENKATESAN
+JUNE 18, 2018 / 2:51 PM
+REPLY
+Is below are possible to write a code in java?
+Write a program to reverse a number(eg. 1234 to 4321) without using modulus operator
+Write Code:  n=1238975. Find the biggest integer value in ‘N’. [o/p : 9]
+Write Code: n=16845. O/p will be “n=14568”. It should be integer value, It should be in ascending form.
+
+dyuthi
+JULY 3, 2018 / 3:01 PM
+REPLY
+how to print the following pattern in java?
+123454321
+1234 4321
+123 321
+12 21
+1 1
+
+theja
+AUGUST 26, 2018 / 6:47 AM
+REPLY
+how to print the pattern
+1
+3 2 4
+7 6 5 8 9
+
+coder
+SEPTEMBER 12, 2018 / 4:54 PM
+REPLY
+import java.io.*;
+class empty_pyramid
+{
+public static void main()throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println(“Enter the number of rows: “);
+int n=Integer.parseInt(br.readLine());
+for(int i=1;i<=n;i++)
+{
+for(int k=i;k<=n;k++)
+{
+System.out.print(" ");
+}
+System.out.print("*");
+for(int j=1;j1)
+{
+System.out.print(“*”);
+}
+System.out.println();
+}
+for(int i=n-1;i>=1;i–)
+{
+for(int k=i;k<=n;k++)
+{
+System.out.print(" ");
+}
+System.out.print("*");
+for(int j=1;j1)
+{
+System.out.print(“*”);
+}
+System.out.println();
+}
+}
+}
+*
+* *
+* *
+* *
+* *
+* *
+* *
+* *
+* *
+* *
+* *
+* *
+* *
+* *
+* *
+* *
+*
+
+muralidhar reddy
+DECEMBER 13, 2018 / 5:10 PM
+REPLY
+Another approach
+
+import java.util.Scanner;
+
+public class PatternEx1 {
+
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+//Taking noOfRows value from the user
+System.out.println(“How Many Rows You Want In Your Pyramid?”);
+int noOfRows = sc.nextInt();
+
+System.out.println(“Here Is Your Pyramid”);
+//Implementing the logic
+for (int i = 0; i <=noOfRows; i++)
+{
+//Printing i spaces at the beginning of each row
+for (int j = 1; j <= noOfRows-i; j++)
+{
+System.out.print(" ");
+}
+//Printing 'rowCount' value 'rowCount' times at the end of each row
+for (int j = 1; j <= i; j++)
+{
+System.out.print(j+" ");
+}
+System.out.println();
+//Incrementing the rowCount
+}
+}
+}
+
+vignesh
+DECEMBER 15, 2018 / 7:42 AM
+REPLY
+help me to create this program
+1 0 0 0 0
+0 1 0 0 0
+0 0 1 0 0
+0 0 0 1 0
+0 0 0 0 1
+
+divya
+DECEMBER 29, 2018 / 9:52 AM
+REPLY
+123456
+65432
+2345
+543
+34
+4
+please help me out with this program
+
+Ajmal
+FEBRUARY 25, 2019 / 9:14 AM
+REPLY
+For better understanding of above codes
+
+public class MainClass
+{
+public static void main(String[] args)
+{
+
+System.out.println(“How Many Rows You Want In Your Pyramid?”);
+
+int noOfRows = 8;
+
+//Initializing rowCount with 1
+
+int rowCount = 1;
+
+System.out.println(“Here Is Your Pyramid”);
+
+//Implementing the logic
+
+for (int i = noOfRows; i > 0; i–)
+{
+//Printing i*2 spaces at the beginning of each row
+
+for (int j = 1; j <= i; j++)
+{
+System.out.print("-");
+}
+
+for (int j = 1; j = 1; j–)
+// {
+// System.out.print(j+” “);
+// }
+
+System.out.println();
+
+//Incrementing the rowCount
+
+rowCount++;
+}
+}
+}
+
+How Many Rows You Want In Your Pyramid?
+Here Is Your Pyramid
+——–*
+——-**
+——***
+—–****
+—-*****
+—******
+–*******
+-********
+
+pushpa kumari
+MARCH 13, 2019 / 10:48 AM
+REPLY
+very nice ……thanku so much
+
+hari
+AUGUST 17, 2019 / 12:34 PM
+REPLY
+help me to create this program please
+54321
+5432
+543
+54
+5
+
+EL
+SEPTEMBER 9, 2019 / 6:25 AM
+REPLY
+how can we write this program
+1
+232
+34543
+4567654
+567898765
+67890109876
+7890123210987
+890123454321098
+90123456765432109
+0123456789876543210
+
+Amin
+SEPTEMBER 16, 2019 / 8:32 PM
+REPLY
+Hi
+How to draw Khayyam’s triangle (also known as Pascal’s triangle) in Java till 6 rows?
+I mean
+1
+1,2,1
+1,3,3,1
+1,4,6,4,1
+1,5,10,10,5,1
+1,6,15,20,15,6,1
+
+Mijo
+APRIL 22, 2020 / 2:02 PM
+REPLY
+1
+2 4 6
+3 6 9 12 15
+4 8 12 16 20 24 28
+
+Samar
+SEPTEMBER 8, 2020 / 3:00 PM
+REPLY
+66666666666
+65555555556
+65444444456
+65433333456
+65432223456
+65432123456
+
+Naresh
+OCTOBER 7, 2020 / 4:41 PM
+REPLY
+How to print the below pattern?
+please help me on this
+if i give input as 5
+1
+1 12
+1 12 123
+1 12 123 1234
+1 12 123 1234 12345
+
+Stefan
+OCTOBER 17, 2022 / 1:47 PM
+REPLY
+/ / / / 1 / / / /
+/ / / 2 1 2 / / /
+/ / 3 2 1 2 3 / /
+/ 4 3 2 1 2 3 4 /
+5 4 3 2 1 2 3 4 5
+
+class Example31 {
+public static void main(String[] argv) {
+
+Scanner sc = new Scanner(System.in);
+int number = sc.nextInt();
+int i,
+i2,//Slashes
+i3;//Numbers
+
+for(i=1;i i; i2–) {
+System.out.print(“/ “);
+}
+//n…3,2,1 left side of the pyramid
+for (i3 = i; i3>=1; i3–) {
+System.out.print(i3 + ” “);
+}
+//2,3,4…n right side of the pyramid
+for(i3=2;i3i;i2–) {
+System.out.print(“/ “);
+}
+System.out.println(” “);
+}
+}
+}
+
+Leave a Reply
+Name
+ *
+Email
+ *
+Website
+Add Comment
+ Notify me of follow-up comments by email.
+
+ Notify me of new posts by email.
+
+<==================================================================================>
+Chat history
+New chat
+Hide sidebar
+Today
+Java Interview Problems
+
+
+
+Previous 7 Days
+Core Java Syllabus
+Learn Typing Skills
+Fluent English Speaking.
+Previous 30 Days
+Existence of God debated
+ATM Program in Java
+Baahubali Epic Story
+Display Time Clock
+Setup Tailwind CSS
+New chat
+Responsive Footer HTML/CSS/JS
+Contact Us Page HTML
+HTML CSS JS Projects
+Calculator App in HTML/CSS/JS
+Create Website with Java
+May
+Software Courses for B.Tech.
+Excel SUM Formula
+April
+Excel Formulas
+Simple PHP Website Creation.
+March
+React Router for Navigation.
+React Home Page Creation.
+SQL Commands
+MongoDB Commands.
+Create API.
+ReactJS Calculator Component.
+React JS concepts
+February
+Simple HTML Website Code
+Create Simple Website
+Upgrade to Plus
+NEW
+
+
+User
+Saikumar Boya
+
+User
+java interview coding problems 
+ChatGPT
+Certainly! I can provide you with a few common coding problems that are often asked in Java interviews. Here are five coding problems along with their solutions:
+
+Problem 1: Reverse a String
+Write a Java program to reverse a given string.
+
+java
+Copy code
+public class StringReverse {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        String reversed = reverseString(str);
+        System.out.println(reversed);
+    }
+
+    public static String reverseString(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+        return sb.toString();
+    }
+}
+Problem 2: Find the Missing Number
+Given an array of n-1 integers in the range of 1 to n, find the missing number in the array.
+
+java
+Copy code
+public class MissingNumber {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 4, 5, 6};
+        int missingNumber = findMissingNumber(arr, arr.length + 1);
+        System.out.println("Missing number: " + missingNumber);
+    }
+
+    public static int findMissingNumber(int[] arr, int n) {
+        int total = n * (n + 1) / 2;
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
+        }
+        return total - sum;
+    }
+}
+Problem 3: Check Palindrome
+Write a Java program to check whether a given string is a palindrome or not.
+
+java
+Copy code
+public class Palindrome {
+    public static void main(String[] args) {
+        String str = "madam";
+        boolean isPalindrome = checkPalindrome(str);
+        System.out.println("Is Palindrome: " + isPalindrome);
+    }
+
+    public static boolean checkPalindrome(String str) {
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
+Problem 4: Find the Duplicate Number
+Given an array of n+1 integers, where each integer is between 1 and n (inclusive), find the duplicate number.
+
+java
+Copy code
+public class DuplicateNumber {
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 4, 2, 2};
+        int duplicateNumber = findDuplicateNumber(arr);
+        System.out.println("Duplicate number: " + duplicateNumber);
+    }
+
+    public static int findDuplicateNumber(int[] arr) {
+        int slow = arr[0];
+        int fast = arr[0];
+        do {
+            slow = arr[slow];
+            fast = arr[arr[fast]];
+        } while (slow != fast);
+
+        fast = arr[0];
+        while (slow != fast) {
+            slow = arr[slow];
+            fast = arr[fast];
+        }
+        return slow;
+    }
+}
+Problem 5: Reverse a Linked List
+Write a Java program to reverse a singly linked list.
+
+java
+Copy code
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+}
+
+public class ReverseLinkedList {
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+
+        ListNode reversed = reverseList(head);
+        while (reversed != null) {
+            System.out.print
+
+
+
+
+Regenerate response
+
+Continue generating
+Send a message.
+
+Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts. ChatGPT May 24 Version
+
+<=====================================================================>
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+/*---------------------------------------------------------------------find duplicate numner--------------------->*/
+import java.util.Scanner;
+ 
+public class Main{
+    
+    // public static void main(String[] args) {
+    //     int[] arr = {1,2,3,4,5,6,8,9};
+    //     int missingNumber = findMissingNumber(arr, arr.length + 1);
+    //     System.out.println("Missing number: " + missingNumber);
+    // }
+
+    // public static int findMissingNumber(int[] arr, int n) {
+    //     int total = n * (n + 1) / 2;
+    //     int sum = 0;
+    //     for (int num : arr) {
+    //         sum += num;
+    //     }
+    //     return total - sum;
+    // }
+    /*<!-----------------------------------------palindrome string--------------------------------------------------------------->*/
+    public static void main(String[] args) {
+        String str = "markram";
+        boolean isPalindrome = checkPalindrome(str);
+        System.out.println("Is Palindrome: " + isPalindrome);
+    }
+
+    public static boolean checkPalindrome(String str) {
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+
+}
+
+
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<studentInfo>
+<student gender="male" id="34">
+<firstname>sai</firstname>
+<age>24</age>
+<rank>224565764765878857</rank>
+
+</student>
+<student gender="male">
+<firstname>vicky</firstname>
+<age>26</age>
+<rank>227</rank>
+
+</student>
+</studentInfo>

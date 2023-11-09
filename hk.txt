@@ -1,0 +1,35 @@
+1.java 8 features 
+2.collection
+3.stream api
+4.functional interface
+5.predicate 
+In Java, a Predicate is a functional interface that is a part of the java.util.function package introduced in Java 8 as part of the Java Functional Programming enhancements. A functional interface is an interface with a single abstract method,
+ and functional interfaces are commonly used in Java for working with lambda expressions and functional programming constructs.
+
+The Predicate functional interface represents a boolean-valued function that takes an argument and
+ returns true or false. It is defined as follows:
+
+java
+Copy code
+@FunctionalInterface
+public interface Predicate<T> {
+    boolean test(T t);
+}
+Here, T is a generic type parameter representing the type of the input to the test method. The test method is the single abstract method in the Predicate interface, and it takes an argument of type T and returns a boolean value. The test method is used to define a condition or a test that can be applied to an object of type T.
+
+Predicates are often used in functional programming scenarios, such as filtering elements in a collection or determining whether an object meets certain criteria. For example, you can use a Predicate to filter a list of integers to select only even numbers:
+ex:List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+Predicate<Integer> isEven = n -> n % 2 == 0;
+
+List<Integer> evenNumbers = numbers.stream()
+                                    .filter(isEven)
+                                    .collect(Collectors.toList());
+
+System.out.println(evenNumbers); // 
+
+
+consumer
+
+6.lambda expression
+7.mapping 
+8.

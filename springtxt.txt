@@ -1,0 +1,637 @@
+
+Commonly used Spring Boot annotations along with their uses and examples
+1). @SpringBootApplication: This annotation is used to bootstrap a Spring Boot application. It combines three annotations: @Configuration, @EnableAutoConfiguration, and @ComponentScan.
+
+Example:
+
+@SpringBootApplication
+public class MyApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApplication.class, args);
+    }
+}
+2). @RestController: This annotation is used to indicate that a class is a RESTful controller. It combines @Controller and @ResponseBody.
+
+Example:
+
+@RestController
+public class MyController {
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, World!";
+    }
+}
+3). @RequestMapping: This annotation is used to map web requests to specific handler methods. It can be applied at the class or method level.
+
+Example:
+
+@RestController
+@RequestMapping("/api")
+public class MyController {
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, World!";
+    }
+}
+4). @Autowired: This annotation is used to automatically wire dependencies in Spring beans. It can be applied to fields, constructors, or methods.
+
+Example:
+
+@Service
+public class MyService {
+    private MyRepository repository;
+
+    @Autowired
+    public MyService(MyRepository repository) {
+        this.repository = repository;
+    }
+}
+5). @Component: This annotation is used to indicate that a class is a Spring bean. Example:
+
+@Component
+public class MyComponent {
+    // ...
+}
+6). @Service: This annotation is used to indicate that a class is a specialized type of Spring bean, typically used for business logic.
+
+Example:
+
+@Service
+public class MyService {
+    // ...
+}
+7). @Repository: This annotation is used to indicate that a class is a specialized type of Spring bean, typically used for database access.
+
+Example:
+
+@Repository
+public class MyRepository {
+    // ...
+}
+8). @Configuration: This annotation is used to declare a class as a configuration class. It is typically used in combination with @Bean methods.
+
+Example:
+
+@Configuration
+public class MyConfiguration {
+    @Bean
+    public MyService myService() {
+        return new MyService();
+    }
+}
+9). @Value: This annotation is used to inject values from properties files or other sources into Spring beans.
+
+Example:
+
+@Component
+public class MyComponent {
+    @Value("${my.property}")
+    private String myProperty;
+}
+10). @EnableAutoConfiguration: This annotation is used to enable Spring Boot’s auto-configuration mechanism. It automatically configures the application based on the classpath dependencies and properties.
+
+Example:
+
+@SpringBootApplication
+@EnableAutoConfiguration
+public class MyApplication {
+    // ...
+}
+11). @GetMapping, @PostMapping, @PutMapping, @DeleteMapping: These annotations are used to map specific HTTP methods to handler methods. They are shortcuts for <strong>@RequestMapping</strong> with the respective HTTP method.
+
+Example:
+
+@RestController
+@RequestMapping("/api")
+public class MyController {
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, World!";
+    }
+    
+    @PostMapping("/data")
+    public void saveData(@RequestBody Data data) {
+        // Save data
+    }
+}
+12). @PathVariable: This annotation is used to bind a method parameter to a path variable in a request URL.
+
+Example:
+
+@RestController
+@RequestMapping("/api")
+public class MyController {
+    @GetMapping("/users/{id}")
+    public User getUser(@PathVariable Long id) {
+        // Retrieve user with the given ID
+    }
+}
+13). @RequestParam: This annotation is used to bind a method parameter to a request parameter.
+
+Example:
+
+@RestController
+@RequestMapping("/api")
+public class MyController {
+    @GetMapping("/users")
+    public List<User> getUsers(@RequestParam("status") String status) {
+        // Retrieve users with the given status
+    }
+}
+14). @RequestBody: This annotation is used to bind the request body to a method parameter. It is commonly used in RESTful APIs to receive JSON or XML payloads. Example:
+
+
+@RestController
+@RequestMapping("/api")
+public class MyController {
+    @PostMapping("/users")
+    public void createUser(@RequestBody User user) {
+        // Create a new user
+    }
+}
+15). @Qualifier: This annotation is used to specify which bean to inject when multiple beans of the same type are available.
+
+Example:
+
+@Service
+@Qualifier("myService")
+public class MyService {
+    // ...
+}
+
+@Service
+public class AnotherService {
+    @Autowired
+    @Qualifier("myService")
+    private MyService myService;
+    // ...
+}
+16). @ConditionalOnProperty: This annotation is used to conditionally enable or disable a bean or configuration based on the value of a property.
+
+Example:
+
+@Configuration
+@ConditionalOnProperty(name = "my.feature.enabled", havingValue = "true")
+public class MyConfiguration {
+    // Configuration for the feature when enabled
+}
+17). @Scheduled: This annotation is used to schedule the execution of a method at fixed intervals.
+
+Example:
+
+@Component
+public class MyScheduler {
+    @Scheduled(fixedDelay = 5000)
+    public void doSomething() {
+        // Perform a task periodically
+    }
+}
+18). @Cacheable, @CachePut, @CacheEvict: These annotations are used for caching method results. They allow you to cache the return value of a method, update the cache, or evict the cache, respectively.
+
+Example:
+
+@Service
+public class MyService {
+    @Cacheable("users")
+    public User getUserById(Long id) {
+        // Retrieve user from database
+    }
+    
+    @CachePut("users")
+    public User updateUser(User user) {
+        // Update user in database and cache
+    }
+    
+    @CacheEvict("users")
+    public void deleteUser(Long id) {
+        // Delete user from database and remove from cache
+    }
+}
+Here’s an extensive list of Spring Boot annotations
+1. Core Annotations:
+a). @SpringBootApplication
+The @SpringBootApplication annotation is used to mark the main class of a Spring Boot application. This is the Spring Boot Application starting point. It combines three annotations: @Configuration, @EnableAutoConfiguration, and @ComponentScan. This annotation enables auto-configuration, component scanning, and configuration capabilities for the application.
+
+Example:
+
+@SpringBootApplication
+public class MyApp {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApp.class, args);
+    }
+}
+b). @ComponentScan
+The @ComponentScan annotation is used to specify the base package(s) to scan for Spring components such as controllers, services, repositories, etc.
+
+Example:
+
+@ComponentScan("com.example.myapp")
+@Configuration
+public class AppConfig {
+    // Configuration code here
+}
+c). @Configuration
+The @Configuration annotation is used to indicate that a class declares one or more bean definitions. It is typically used in combination with @Bean to define Spring configuration classes. In the example, the DatabaseConfig class is marked as a configuration class, and the dataSource() method is annotated with @Bean to define a bean of type DataSource.
+
+d). @EnableAutoConfiguration
+The @EnableAutoConfiguration annotation allows Spring Boot to automatically configure the application based on the dependencies present in the classpath. It helps to reduce manual configuration by inferring configuration based on conventions and default settings.
+
+e). @RestController
+The @RestController annotation is used to mark a class as a controller in a Spring MVC or Spring WebFlux application. It combines the @Controller and @ResponseBody annotations. In the example, the UserController class is a REST controller that handles HTTP GET requests for the “/users” endpoint.
+
+f). @Controller
+The @Controller annotation is used to mark a class as a controller in a Spring MVC or Spring WebFlux application. It handles HTTP requests and returns the view name or a response body. In the example, the HomeController class is a controller that handles requests for the root (“/”) URL and returns the view name “index”.
+
+g). @Service
+The @Service annotation is used to mark a class as a service component in the business logic layer. It is used to encapsulate business logic and perform operations such as data retrieval, manipulation, and validation. In the example, the UserService class is a service component that provides a method to retrieve users.
+
+h). @Repository
+The @Repository annotation is used to mark a class as a repository component in the data access layer. It is responsible for data access operations such as querying, saving, updating, and deleting data from a database. In the example, the UserRepository class is a repository component that provides a method to retrieve users from the database.
+
+i). @Bean
+The @Bean annotation is used to declare a method as a bean producer method within a configuration class. It indicates that the method returns an object that should be managed by the Spring container as a bean. In the example, the userService() method is annotated with @Bean to define a bean of type UserService.
+
+j). @Autowired
+The @Autowired annotation is used to inject dependencies automatically by type. It can be applied to constructors, fields, and methods. In the example, the UserRepository dependency is autowired into the UserService class constructor.
+
+k). @Qualifier
+The @Qualifier annotation is used to resolve ambiguous dependencies when there are multiple beans of the same type. It can be applied along with @Autowired to specify the exact bean to be injected. In the example, the userRepository bean is qualified using its bean name.
+
+l). @Value
+The @Value annotation is used to inject values from external sources, such as properties files, into variables. In the example, the appName the variable is injected with the value of the “app.name” property from an external configuration source.
+
+2. Web Annotations:
+@RequestMapping
+
+@GetMapping
+
+@PostMapping
+
+@PutMapping
+
+@DeleteMapping
+
+@PatchMapping
+
+@RequestBody
+
+@ResponseBody
+
+@PathVariable
+
+@RequestParam
+
+@RequestHeader
+
+@CookieValue
+
+@ModelAttribute
+
+@ResponseStatus
+
+@ExceptionHandler
+
+3. Data Annotations:
+@Entity
+
+@Table
+
+@Id
+
+@GeneratedValue
+
+@Column
+
+@Transient
+
+@Repository
+
+@Service
+
+@Transactional
+
+@PersistenceContext
+
+@Autowired
+
+@Query
+
+@NamedQuery
+
+@Param
+
+@JoinTable
+
+@JoinColumn
+
+4. Validation Annotations:
+@Valid
+
+@NotNull
+
+@Size
+
+@Min
+
+@Max
+
+@Email
+
+@Pattern
+
+5. Security Annotations:
+@EnableWebSecurity
+
+@Configuration
+
+@EnableGlobalMethodSecurity
+
+@PreAuthorize
+
+@PostAuthorize
+
+@Secured
+
+@RolesAllowed
+
+@EnableOAuth2Client
+
+@EnableResourceServer
+
+@EnableAuthorizationServer
+
+6. Testing Annotations:
+@RunWith
+
+@SpringBootTest
+
+@WebMvcTest
+
+@DataJpaTest
+
+@RestClientTest
+
+@MockBean
+
+@AutoConfigureMockMvc
+
+@Test
+
+@Before
+
+@After
+
+@BeforeEach
+
+@AfterEach
+
+@BeforeAll
+
+@AfterAll
+
+@DisplayName
+
+@Disabled
+
+@ParameterizedTest
+
+@ValueSource
+
+@CsvSource
+
+@ExtendWith
+
+7. Caching Annotations:
+@EnableCaching
+
+@Cacheable
+
+@CachePut
+
+@CacheEvict
+
+@Caching
+
+8. Scheduling Annotations:
+@EnableScheduling
+
+@Scheduled
+
+9. Messaging Annotations:
+@EnableJms
+
+@JmsListener
+
+@SendTo
+
+@MessageMapping
+
+@Payload
+
+@Header
+
+10. Aspect-Oriented Programming (AOP) Annotations:
+@Aspect
+
+@Pointcut
+
+@Before
+
+@After
+
+@AfterReturning
+
+@AfterThrowing
+
+@Around
+
+11. Actuator Annotations:
+@EnableActuator
+
+@Endpoint
+
+@RestControllerEndpoint
+
+@ReadOperation
+
+@WriteOperation
+
+@DeleteOperation
+
+12. Configuration Properties Annotations:
+@ConfigurationProperties
+
+@ConstructorBinding
+
+@Validated
+
+13. Internationalization and Localization:
+@EnableMessageSource
+
+@EnableWebMvc
+
+@LocaleResolver
+
+@MessageBundle
+
+@MessageSource
+
+14. Logging and Monitoring:
+@Slf4j
+
+@Log4j2
+
+@Log
+
+@Timed
+
+@Counted
+
+@ExceptionMetered
+
+15. Data Validation:
+@Validated
+
+@Valid
+
+@Validated
+
+@NotNull
+
+@NotBlank
+
+@Email
+
+@Size
+
+@Pattern
+
+@Positive
+
+@PositiveOrZero
+
+@Negative
+
+@NegativeOrZero
+
+16. GraphQL Annotations:
+@GraphQLApi
+
+@GraphQLQuery
+
+@GraphQLMutation
+
+@GraphQLSubscription
+
+@GraphQLArgument
+
+@GraphQLContext
+
+@GraphQLNonNull
+
+@GraphQLInputType
+
+@GraphQLType
+
+17. Integration Annotations:
+@IntegrationComponentScan
+
+@MessagingGateway
+
+@Transformer
+
+@Splitter
+
+@Aggregator
+
+@ServiceActivator
+
+@InboundChannelAdapter
+
+@OutboundChannelAdapter
+
+@Router
+
+@BridgeTo
+
+18. Flyway Database Migrations:
+@FlywayTest
+
+@FlywayTestExtension
+
+@FlywayTestExtension.Test
+
+@FlywayTestExtension.BeforeMigration
+
+@FlywayTestExtension.AfterMigration
+
+19. JUnit 5 Annotations:
+@ExtendWith
+
+@TestInstance
+
+@TestTemplate
+
+@DisplayNameGeneration
+
+@Nested
+
+@Tag
+
+@DisabledOnOs
+
+@EnabledOnOs
+
+@DisabledIf
+
+@EnabledIf
+
+20. API Documentation Annotations:
+@Api: This annotation is used to provide high-level information about the API.
+
+@ApiOperation: This annotation is used to describe an operation or endpoint in the API.
+
+
+@ApiParam: This annotation is used to describe a parameter in an API operation.
+
+
+@ApiModel: This annotation is used to describe a data model used in the API.
+
+@ApiModelProperty: This annotation is used to describe a property of a data model.
+
+21. Exception Handling Annotations:
+@ControllerAdvice: This annotation is used to define global exception handling for controllers.
+
+@ExceptionHandler: This annotation is used to define a method to handle specific exceptions.
+
+22. GraphQL Annotations:
+@GraphQLSchema: This annotation is used to define the GraphQL schema for a Spring Boot application.
+
+@GraphQLQueryResolver: This annotation is used to define a class as a GraphQL query resolver.
+
+@GraphQLMutationResolver: This annotation is used to define a class as a GraphQL mutation resolver.
+
+@GraphQLSubscriptionResolver: This annotation is used to define a class as a GraphQL subscription resolver.
+
+@GraphQLResolver: This annotation is used to define a class as a generic resolver for GraphQL.
+
+23. Server-Sent Events (SSE) Annotations:
+@SseEmitter: This annotation is used to create an SSE endpoint for server-sent events.
+
+@SseEventSink: This annotation is used to inject an SSE event sink into a method parameter.
+
+24. WebFlux Annotations:
+@RestController: This annotation is used to create a RESTful controller in a WebFlux application.
+
+@GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @PatchMapping: These annotations are used to map HTTP methods to handler methods in a WebFlux application.
+
+25. Micrometer Metrics Annotations:
+@Timed: This annotation is used to measure the execution time of a method.
+
+@Counted: This annotation is used to count the number of times a method is invoked.
+
+
+@Gauge: This annotation is used to expose a method as a gauge metric.
+
+
+@ExceptionMetered: This annotation is used to measure the rate of exceptions thrown by a method.

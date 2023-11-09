@@ -1,0 +1,180 @@
+The Stream API in Java 8 provides a wide range of operations for processing sequences of elements in a functional and expressive way. These operations can be categorized into two main types: intermediate operations and terminal operations.
+
+Intermediate Operations:
+Intermediate operations are operations that transform a stream into another stream. They are typically used in a pipeline of operations to process data. Some common intermediate operations include:
+
+filter(Predicate<T> predicate): Filters the elements of the stream based on a given predicate.
+
+map(Function<T, R> mapper): Transforms each element of the stream using the provided mapping function.
+
+flatMap(Function<T, Stream<R>> mapper): Flattens a stream of streams into a single stream, allowing you to work with nested collections.
+
+distinct(): Returns a stream with unique elements (based on the natural order or a provided comparator).
+
+sorted(): Sorts the elements of the stream in their natural order.
+
+sorted(Comparator<T> comparator): Sorts the elements of the stream using a provided comparator.
+
+limit(long maxSize): Reduces the size of the stream to the first maxSize elements.
+
+skip(long n): Skips the first n elements of the stream.
+
+peek(Consumer<T> action): Performs an action on each element as they are consumed from the stream, useful for debugging or logging.
+
+Terminal Operations:
+Terminal operations are operations that produce a result or a side effect, effectively ending the stream. Some common terminal operations include:
+
+forEach(Consumer<T> action): Applies an action to each element in the stream.
+
+toArray(): Collects the elements of the stream into an array.
+
+collect(Collector<T, A, R> collector): Performs a mutable reduction operation to collect elements into a collection or other data structure.
+
+min(Comparator<T> comparator): Returns the minimum element in the stream based on the provided comparator.
+
+max(Comparator<T> comparator): Returns the maximum element in the stream based on the provided comparator.
+
+count(): Returns the count of elements in the stream.
+
+anyMatch(Predicate<T> predicate): Returns true if any element in the stream matches the given predicate.
+
+allMatch(Predicate<T> predicate): Returns true if all elements in the stream match the given predicate.
+
+noneMatch(Predicate<T> predicate): Returns true if no elements in the stream match the given predicate.
+
+findAny(): Returns an arbitrary element from the stream (useful for parallel streams).
+
+findFirst(): Returns the first element of the stream.
+
+reduce(identity, BinaryOperator<T> accumulator): Performs a reduction on the elements using the provided binary operator and an initial identity value.
+
+forEachOrdered(Consumer<T> action): Applies an action to each element in the stream in their encounter order (useful for ordered parallel streams).
+
+These operations allow you to perform a wide range of data processing tasks with streams in a concise and functional manner. When used in combination, you can build complex data processing pipelines to filter, transform, and aggregate data effectively.
+
+filter:
+java
+Copy code
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+List<Integer> evenNumbers = numbers.stream()
+    .filter(n -> n % 2 == 0)
+    .collect(Collectors.toList());
+map:
+java
+Copy code
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+
+List<Integer> nameLengths = names.stream()
+    .map(String::length)
+    .collect(Collectors.toList());
+flatMap:
+StSjava
+Copy code
+List<List<Integer>> nestedList = Arrays.asList(
+                                 Arrays.asList(1, 2),
+                                 Arrays.asList(3, 4),
+                                 Arrays.asList(5, 6));
+
+List<Integer> flatList = nestedList.stream()
+    .flatMap(List::stream)
+    .collect(Collectors.toList());
+distinct:
+java
+Copy code
+List<String> names = Arrays.asList("Alice", "Bob", "Alice", "Charlie");
+
+List<String> uniqueNames = names.stream()
+    .distinct()
+    .collect(Collectors.toList());
+sorted:
+java
+Copy code
+List<Integer> numbers = Arrays.asList(5, 2, 9, 1, 7);
+
+List<Integer> sortedNumbers = numbers.stream()
+F    .sorted()
+    .collect(Collectors.toList());
+limit and skip:
+java
+Copy code
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+List<Integer> limitedAndSkipped = numbers.stream()
+    .skip(2) // Skip the first 2 elements
+    .limit(5) // Take the next 5 elements
+    .collect(Collectors.toList());
+peek:
+java
+Copy code
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+
+List<String> uppercaseNames = names.stream()
+    .map(String::toUpperCase)
+    .peek(System.out::println) // Print each uppercase name
+    .collect(Collectors.toList());
+Terminal Operations:
+
+forEach:
+java
+Copy code
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+
+names.stream().forEach(System.out::println);
+toArray:
+java
+Copy code
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+
+String[] nameArray = names.stream().toArray(String[]::new);
+collect:
+java
+Copy code
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+
+List<String> collectedNames = names.stream()
+    .filter(name -> name.length() > 4)
+    .collect(Collectors.toList());
+min and max:
+java
+Copy code
+List<Integer> numbers = Arrays.asList(5, 2, 9, 1, 7);
+
+Optional<Integer> min = numbers.stream().min(Integer::compareTo);
+Optional<Integer> max = numbers.stream().max(Integer::compareTo);
+count:
+java
+Copy code
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+
+long count = names.stream().count();
+anyMatch, allMatch, and noneMatch:
+java
+Copy code
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+boolean anyEven = numbers.stream().anyMatch(n -> n % 2 == 0);
+boolean allEven = numbers.stream().allMatch(n -> n % 2 == 0);
+boolean noneOdd = numbers.stream().noneMatch(n -> n % 2 != 0);
+findAny and findFirst:
+java
+Copy code
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+
+Optional<String> anyName = names.stream().findAny();
+Optional<String> firstName = names.stream().findFirst();
+reduce:
+java
+Copy code
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+int sum = numbers.stream()
+    .reduce(0, (a, b) -> a + b);
+forEachOrdered:
+java
+Copy code
+List<Integer> numbers = Arrays.asList(5, 2, 9, 1, 7);
+
+numbers.parallelStream()
+    .forEachOrdered(System.out::println);
+These examples demonstrate how to use the common Stream API operations to manipulate and process data in a variety of ways.

@@ -1,0 +1,130 @@
+
+5+ years of experience as a Full stack lead/developer having the key skills -Core Java, Spring Boot, 
+Spring REST, Spring Reactive, Mongo (NoSQL DB experience), Spring Cloud
+Experience working on Open Source Technologies: Java Full Stack Hands on Java, 
+Spring MVC, Spring boot, Hibernate etc
+Proficient with techs like Angular 7 or above, Bootstrap, JSON, HTML, CSS, JS etc
+Experience in : MongoDB, PostgreSQL
+Well versed with Developer tools : Git, Jenkins, Jira, Maven, Postman, Eclipse etc
+Exposure to Cloud Platforms: Azure, AWS, GCP etc
+Good understanding of Microservices
+Good communication skills
+Ready to learn new technologies.
+
+*************************************************************************************
+Java Full Stack Developer
+Version 1 Bengaluru, Karnataka, India Hybrid
+
+Easy Apply
+
+Save
+Save Java Full Stack Developer at Version 1
+Show more options
+Meet the hiring team
+kannika
+kannika CM 
+ 3rd+
+Version1
+Job poster
+
+Message
+About the job
+Position Overview:
+
+We are seeking an experienced Full Stack Java Software Developer with a strong background in the Insurance Domain (preferably Life , Accident ,Health Insurance) . The ideal candidate should possess a solid foundation in Java development, expertise in ReactJS, and hands-on experience with AWS cloud services. The candidate should be comfortable working across both product development and services contexts and should be familiar with technologies like Oracle, Docker containerization, TypeScript, Spring Boot, CI/CD tools (Jenkins, Maven, Git), Agile development methodologies, JavaScript test frameworks (Jest, Cypress, Jasmine), OOAD (Object-Oriented Analysis and Design), and Data Modeling.
+Key Responsibilities:
+
+• Collaborate with cross-functional teams to gather and understand software requirements, particularly in the insurance domain context.
+• Design, develop, and maintain full-stack software solutions using Java, ReactJS, TypeScript, and other relevant technologies.
+• Build and integrate RESTful APIs, web services, and microservices to ensure seamless communication between various components.
+• Develop responsive user interfaces that deliver an exceptional user experience across different devices and browsers.
+• Implement and optimize database interactions using technologies like Oracle, ensuring data integrity and performance.
+• Leverage AWS services to deploy, monitor, and scale applications in a cloud environment.
+• Utilize Docker containerization for packaging and deployment of applications.
+• Implement Spring Boot framework for efficient backend development.
+• Utilize CI/CD tools such as Jenkins and Maven to automate build, deployment, and testing processes.
+• Write unit tests using frameworks like JUnit to ensure code quality and reliability.
+• Contribute to Agile development practices, including sprint planning, daily stand-ups, and retrospectives.
+• Participate in code reviews, provide constructive feedback, and ensure adherence to coding best practices.
+• Implement JavaScript test frameworks such as Jest, Cypress, and Jasmine to ensure frontend functionality.
+• Apply Object-Oriented Analysis and Design principles to develop scalable and maintainable software solutions.
+• Create and maintain data models to support application functionality and database interactions.
+
+Qualifications
+Skills & Experience Required:
+
+• Bachelor's degree in Computer Science, Software Engineering, or a related field (or equivalent experience).
+• Proven experience (8+ years) working as a Full Stack Java Developer in both product development and services settings.
+• Strong proficiency in Java programming language and associated frameworks (Spring Boot, Hibernate, etc.).
+• 3+ years of Hands-on experience with front-end development using ReactJS, TypeScript, HTML5, CSS3, and modern JavaScript libraries.
+• Familiarity with AWS services such as EC2, S3, Lambda, API Gateway, and others relevant to application deployment and maintenance.
+• Solid understanding of software development principles, design patterns, and best practices.
+• Experience working in the insurance domain, understanding key concepts and business processes, is highly desirable.
+• Proficiency in writing efficient SQL queries and designing database schemas using Oracle or similar databases.
+• Experience with Docker containerization, CI/CD tools (Jenkins, Maven, Git), and unit testing frameworks (JUnit).
+• Familiarity with Agile development methodologies and collaboration tools (e.g., Jira, Confluence).
+• Knowledge of JavaScript test frameworks like Jest, Cypress, and Jasmine.
+• Strong understanding of Object-Oriented Analysis and Design (OOAD) principles.
+• Experience with Spring Boot framework for backend development.
+• Proficiency in data modelling and database design.
+• Ability to collaborate effectively within cross-functional teams and communicate technical concepts clearly.
+• Strong problem-solving skills with a proactive attitude towards tackling challenges
+*************************************************************************************************************
+Java Full-Stack Developer
+Simeio Bengaluru, Karnataka, India Hybrid
+
+Easy Apply
+
+Save
+Save Java Full-Stack Developer at Simeio
+Show more options
+Meet the hiring team
+Ranjinni
+Ranjinni V H 
+ 3rd
+Connecting Talent to Opportunities
+Job poster
+
+Message
+About the job
+Job Title: Java Full-stack Developer 
+
+Role: Principal Consultant
+Experience: 7+ years
+Location: IN - Bangaluru, Karnataka (Hybrid)
+
+
+Job Summary: 
+
+ 
+We are seeking an experienced and talented Java Full-stack Developer with at least 7 years of hands-on experience to join our dynamic development team. As a key member of our team, you will be responsible for designing, developing, and maintaining complex web applications that deliver exceptional user experiences. You will collaborate closely with cross-functional teams to ensure the successful delivery of high-quality software solutions.
+ 
+Responsibilities:
+
+ 
+Full-stack Development: Design, develop, and maintain both front-end and back-end components of web applications using Java technologies, frameworks, and tools.
+Architecture and Design: Participate in the architectural discussions and decisions to ensure scalability, reliability, and maintainability of the application. Translate business requirements into technical solutions.
+Front-end Development: Develop responsive and user-friendly UI components using modern front-end technologies such as HTML5, CSS3, JavaScript, and relevant frameworks like Angular, React, or Vue.js.
+Back-end Development: Build robust, efficient, and scalable server-side components using Java technologies (e.g., Spring Boot, Hibernate) while ensuring optimal performance and security.
+Database Integration: Design and optimize database schemas, write efficient SQL queries, and work with databases such as MySQL, PostgreSQL, or NoSQL databases as needed.
+API Development: Create and consume RESTful APIs, integrating external services and third-party APIs when necessary.
+Code Quality and Testing: Write clean, maintainable, and well-documented code. Perform unit testing, integration testing, and participate in code reviews to ensure code quality and adherence to best practices.
+Collaboration: Collaborate closely with cross-functional teams including UI/UX designers, product managers, and other developers to ensure the successful delivery of features and projects.
+Troubleshooting and Debugging: Identify and resolve issues, bugs, and performance bottlenecks across the application stack.
+Continuous Improvement: Stay up-to-date with industry trends, best practices, and emerging technologies. Proactively suggest and implement improvements to the development process, tools, and technologies.
+Agile Methodology: Work within an Agile/Scrum environment, participating in daily stand-ups, sprint planning, and other Agile practices.
+Mentorship and Leadership: Provide guidance and mentorship to junior developers, share knowledge, and contribute to the growth of the development team.
+ 
+Qualifications:
+
+Bachelor’s degree in computer science, Engineering, or related field.
+Proven 7+ years of experience as a Java Full-stack Developer, with a strong portfolio of web applications.
+Proficiency in Java programming language and related frameworks (Spring, Spring Boot, Hibernate, etc.).
+Experience with front-end technologies such as HTML5, CSS3, JavaScript, and relevant frameworks (Angular, React, Vue.js).
+In-depth understanding of database technologies, including SQL and experience with databases like MySQL, PostgreSQL, or NoSQL databases.
+Strong knowledge of RESTful API design and development.
+Familiarity with version control systems (e.g., Git) and CI/CD pipelines.
+Excellent problem-solving skills and ability to troubleshoot complex issues.
+Strong communication and teamwork skills.
+Experience working in an Agile/Scrum development environment.
+Leadership skills and the ability to mentor junior developers is a plus.

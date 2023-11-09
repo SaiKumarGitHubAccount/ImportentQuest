@@ -1,0 +1,10 @@
+CREATE TABLE `leads` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `email` varchar(128) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `mobile` bigint NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_5dw9kmt497rahmbxg530pqers` (`email`),
+  UNIQUE KEY `UK_euqh2yf13qa2m432gcpwjatw3` (`mobile`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

@@ -1,0 +1,1579 @@
+import java.util.Scanner;
+
+public class ATMProgram {
+    private static double balance = 1000; // Initial balance
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean quit = false;
+
+        while (!quit) {
+            System.out.println("ATM Menu:");
+            System.out.println("1. Check Balance");
+            System.out.println("2. Withdraw Money");
+            System.out.println("3. Deposit Money");
+            System.out.println("4. Quit");
+
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+            System.out.println();
+
+            switch (choice) {
+                case 1:
+                    checkBalance();
+                    break;
+                case 2:
+                    System.out.print("Enter the amount to withdraw: ");
+                    double amountToWithdraw = scanner.nextDouble();
+                    withdrawMoney(amountToWithdraw);
+                    break;
+                case 3:
+                    System.out.print("Enter the amount to deposit: ");
+                    double amountToDeposit = scanner.nextDouble();
+                    depositMoney(amountToDeposit);
+                    break;
+                case 4:
+                    quit = true;
+                    System.out.println("Thank you for using the ATM. Goodbye!");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please enter a valid option.");
+            }
+
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+
+    private static void checkBalance() {
+        System.out.println("Current balance: $" + balance);
+    }
+
+    private static void withdrawMoney(double amount) {
+        if (amount > balance) {
+            System.out.println("Insufficient funds. Unable to withdraw.");
+        } else {
+            balance -= amount;
+            System.out.println("Successfully withdrew $" + amount);
+            System.out.println("Current balance: $" + balance);
+        }
+    }
+
+    private static void depositMoney(double amount) {
+        balance += amount;
+        System.out.println("Successfully deposited $" + amount);
+        System.out.println("Current balance: $" + balance);
+    }
+}
+<!-------------------------------------------------------------------------------->
+
+import java.util.Scanner;
+
+public class StudentGradesProgram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of students: ");
+        int numStudents = scanner.nextInt();
+
+        String[] names = new String[numStudents];
+        double[] grades = new double[numStudents];
+
+        for (int i = 0; i < numStudents; i++) {
+            System.out.println("Enter the details for student " + (i + 1) + ":");
+            System.out.print("Name: ");
+            scanner.nextLine(); // Consume the newline character
+            names[i] = scanner.nextLine();
+            System.out.print("Grade: ");
+            grades[i] = scanner.nextDouble();
+        }
+
+        System.out.println("\nStudent Grades:");
+
+        for (int i = 0; i < numStudents; i++) {
+            System.out.println("Name: " + names[i] + ", Grade: " + grades[i]);
+        }
+
+        scanner.close();
+    }
+}
+<!------------------------------------------------------------------------------------>
+import java.util.Scanner;
+
+public class SquarePatternProgram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the size of the square: ");
+        int size = scanner.nextInt();
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+
+
+<!------------------------------------------------------------------------>
+import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args){
+
+    // create ArrayList
+    ArrayList<String> languages = new ArrayList<>();
+
+    // Add elements to ArrayList
+    languages.add("Java");
+    languages.add("Python");
+    languages.add("Swift");
+    System.out.println("ArrayList: " + languages);
+  }
+}
+
+<!--------------------------------------------------------------------->
+import java.util.ArrayList;
+
+class Main {
+  public static void main(String[] args){
+    // create ArrayList
+    ArrayList<String> languages = new ArrayList<>();
+
+    // add() method without the index parameter
+    languages.add("Java");
+    languages.add("C");
+    languages.add("Python");
+    System.out.println("ArrayList: " + languages);
+  }
+}
+
+<!===============================================================================>
+Register for 45 Day Coding Challenge by CodeStudio and win some exciting prizes
+Tutorials Tonight
+Search any topic...
+
+
+ Category
+Pattern Program In Java
+In this tutorial, we will learn to create Pattern program in Java. We will see 30 different patterns in Java with explanation and source code.
+
+Table Of Contents
+
+The square pattern in Java
+Hollow square pattern
+left triangle Pattern program in Java
+right triangle Pattern program in Java
+Left Down triangle
+Right Down triangle
+Hollow triangle star pattern in Java
+Pyramid star pattern in Java
+Reverse pyramid star pattern in Java
+Hollow pyramid star pattern in Java
+Diamond star pattern in Java
+Hollow diamond star pattern in Java
+Hourglass star pattern
+Right Pascal star pattern
+Left Pascal star pattern
+Heart star pattern
+Plus star pattern
+Cross star pattern
+Left triangle number pattern
+Right triangle number pattern
+Number pyramid pattern
+Number pyramid reverse pattern
+Hollow number pyramid pattern
+Number diamond pattern
+Hollow number diamond pattern
+Alphabet pyramid pattern
+Reverse alphabet pyramid pattern
+Hollow alphabet pyramid pattern
+Alphabet diamond pattern
+Hollow alphabet diamond pattern
+Pattern program in Java
+1. Square pattern in Java
+The square pattern in Java is the simplest pattern that you can start with.
+
+*****
+*****
+*****
+*****
+*****
+This pattern makes a shape of a square or you can shape it in a rectangle.
+
+
+Steps to create a square pattern in Java:
+
+Define the size of the square (or you can take user input).
+Create a nested loop where the external loop is the number of rows and the inner loop is the number of columns.
+Print the star in each column and print a new line after each row.
+public class squarePattern {
+  public static void main(String[] args) {
+
+    // size of the square
+    int size = 5;
+    // outer loop
+    for (int i = 0; i < size; i++) {
+      // inner loop
+      for (int j = 0; j < size; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+*****
+*****
+*****
+*****
+*****
+2. Hollow Square pattern
+The hollow square is the same as the above pattern but stars only at the borders. Which makes it a hollow square.
+
+*****
+*   *
+*   *
+*   *
+*****
+Steps to create a hollow square pattern in Java:
+
+Set size of the square (or take user input).
+Create a nested loop where the external loop executes the number of rows.
+In the internal loop, print star in the first and last row and only at the first and last column.
+Break the line after each row.
+public class hollowSquare {
+  public static void main(String[] args) {
+
+    // size of the square
+    int size = 5;
+    // outer loop
+    for (int i = 0; i < size; i++) {
+      // inner loop
+      for (int j = 0; j < size; j++) {
+        // print only star in first and last row
+        if (i == 0 || i == size - 1) {
+          System.out.print("*");
+        }
+        else {
+          // print star only at first and last position row
+          if (j == 0 || j == size - 1) {
+            System.out.print("*");
+          }
+          else {
+            System.out.print(" ");
+          }
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+*****
+*   *
+*   *
+*   *
+*****
+3. Left triangle star pattern in Java
+The left triangle star pattern is also quite a simple pattern. It has a shape of a triangle with its perpendicular line at the left side.
+
+*
+**
+***
+****
+*****
+Steps to create a left triangle star pattern in Java:
+
+Take the size of the triangle.
+Create a nested loop and repeat the outer loop for times equal to the size of the triangle.
+Repeat the inner loop for times equal to the index of the outer loop and print star (*).
+Use println to break the line after each row.
+public class leftTrianlge {
+  public static void main(String[] args) {
+
+    // size of the triangle
+    int size = 5;
+    // loop to print the pattern
+    for (int i = 0; i < size; i++) {
+      // print column
+      for (int j = 0; j <= i; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+*
+**
+***
+****
+*****
+Ezoicreport this ad
+4. Right triangle pattern program in Java
+The right triangle star pattern is also the same as the left triangle star pattern but it has a shape of a triangle with its perpendicular line at the right side.
+
+    *
+   **
+  ***
+ ****
+*****
+This is a bit harder than the left triangle star pattern because you also have to deal with spaces in the pattern.
+
+Steps to create a right triangle star pattern:
+
+Repeat the external loop to print columns of the triangle.
+Inside this loop use, 2 different loops first to print spaces and second to print stars.
+At the end of each row, create a new line.
+public class rightTrianlge {
+  public static void main(String[] args) {
+
+    // size of the triangle
+    int size = 5;
+    // loop to print the pattern
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 1; j < size - i; j++) {
+        System.out.print(" ");
+      }
+      // print stars
+      for (int k = 0; k <= i; k++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    *
+   **
+  ***
+ ****
+*****
+5. Left Down Triangle
+You can see Left down triangle below.
+
+*****
+****
+***
+**
+*
+Here are the steps to create a downward triangle pattern program in Java:
+
+Take the size of your triangle.
+Create an external loop to print rows of triangles.
+Create an inner loop that print star for times equal to size minus the outer loop index.
+public class leftDown {
+  public static void main(String[] args) {
+
+    // size of the triangle
+    int size = 5;
+    for (int i = 0; i < size; i++) {
+      // print stars
+      for (int j = 0; j < size - i; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+*****
+****
+***
+**
+*
+6. Right Down Triangle
+You can see Right down triangle below.
+
+*****
+ ****
+  ***
+   **
+    *
+Here is the complete code create downward triangle pattern program in Java:
+
+public class rightDown {
+  public static void main(String[] args) {
+
+    // size of the triangle
+    int size = 5;
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // print stars
+      for (int j = size; j > i; j--) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+*****
+ ****
+  ***
+   **
+    *
+7. Hollow triangle star pattern in Java
+The hollow triangle star pattern is a simple triangle pattern with stars only at its boundary making it hollow.
+
+*
+**
+* *
+*  *
+*   *
+******
+Steps to create hollow triangle pattern program in Java:
+
+Set a size for the triangle and create an outer loop to print rows.
+Inside the inner loop, if the index of the inner loop is last then print star (*) at first and last index of the inner loop.
+If it is the last row then print only star (*).
+Change line after each row.
+public class hollowTrianlge {
+  public static void main(String[] args) {
+
+    // size of the triangle
+    int size = 5;
+    for (int i = 1; i <= size; i++) {
+      for (int j = 0; j < i; j++) {
+        // not last row
+        if (i != size) {
+          if (j == 0 || j == i - 1) {
+            System.out.print("*");
+          } else {
+            System.out.print(" ");
+          }
+        }
+        // last row
+        else {
+          System.out.print("*");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+*
+**
+* *
+*  *
+*   *
+******
+8. Pyramid star pattern in Java
+The most famous star pattern is the pyramid pattern.
+
+    *
+   ***
+  *****
+ *******
+*********
+Steps to create a pyramid Java pattern programs:
+
+Take the size and create an external loop to print all rows.
+Inside the outer loop, we have to create 2 inner loops. First for printing spaces and second for printing stars.
+print number of spaces equal to size minus the outer loop index in the first inner loop.
+Inside the second inner loop, print the number of stars equal to 2 times the outer loop index minus 1.
+A the end of these 2 inner loops create a new line.
+public class pyramid {
+  // pyramid star pattern
+  public static void main(String[] args) {
+
+    int size = 5;
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 0; j < size - i - 1; j++) {
+        System.out.print(" ");
+      }
+      // print stars
+      for (int k = 0; k < 2 * i + 1; k++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+
+    *
+   ***
+  *****
+ *******
+*********
+9. Reverse pyramid star pattern in Java
+*********
+ *******
+  *****
+   ***
+    *
+The reverse pyramid star pattern is the same as the pyramid star pattern but rotated 180 degrees.
+
+This also follows the same logic as the pyramid star pattern just a different loop order.
+
+public class reversePyramid {
+  public static void main(String[] args) {
+    // size of the pyramid
+    int size = 5;
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // print stars
+      for (int k = 0; k < 2 * (size - i) - 1; k++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+*********
+ *******
+  *****
+   ***
+    *
+Stay Ahead, Learn More
+
+Alphabet Patterns in Java
+Number Patterns in Java
+Diamond Star Pattern in Java
+Pyramid Pattern in Java
+10. Hollow pyramid pattern program in Java
+The hollow pyramid is a hollow pyramid with stars only at corners.
+
+    *
+   * *
+  *   *
+ *     *
+*********
+Here are the steps to create a Hollow pyramid pattern program in Java:
+
+Set size of the hollow pyramid.
+Inside the external loop, we have to create 2 inner loops. First for printing spaces and second for printing stars.
+The first loop print a number of spaces equal to size minus the outer loop index.
+The second inner loop will run for 2 times the outer loop index plus 1 and print star only at the first and last index of the row.
+Keep changing line after each row.
+public class hollowPyramid {
+  public static void main(String[] args) {
+    // size of the pyramid
+    int size = 5;
+    for (int  i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 0; j < size - i - 1; j++) {
+        System.out.print(" ");
+      }
+      // print stars
+      for (int k = 0; k < 2 * i + 1; k++) {
+        if (i == 0 || i == size - 1) {
+          System.out.print("*");
+        }
+        else {
+          if (k == 0 || k == 2 * i) {
+            System.out.print("*");
+          }
+          else {
+            System.out.print(" ");
+          }
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    *
+   * *
+  *   *
+ *     *
+*********
+11. Diamond star pattern in Java
+You can see here the diamond star pattern. It is made up of the pyramid and the reverse pyramid pattern.
+
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+If you combine the code of pyramid and reverse pyramid in the right order, you will get the diamond star pattern.
+
+Here is complete code to create diamond pattern program in Java:
+
+public class diamond {
+  public static void main(String[] args) {
+    int size = 5;
+    // upside pyramid
+    for (int i = 1; i <= size; i++) {
+      // printing spaces
+      for (int j = size; j > i; j--) {
+        System.out.print(" ");
+      }
+      // printing star
+      for (int k = 0; k < i * 2 - 1; k++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+    // downside pyramid
+    for (int i = 1; i <= size - 1; i++) {
+      // printing spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // printing star
+      for (int k = (size - i) * 2 - 1; k > 0; k--) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+12. Hollow diamond star pattern in Java
+The hollow diamond star pattern is the same as the diamond star pattern but stars only at the boundary.
+
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+Here is complete code to create hollow diamond pattern program in Java:
+
+public class hollowDiamond {
+  public static void main(String[] args) {
+    int size = 5;
+    // upside pyramid
+    for (int i = 1; i <= size; i++) {
+      // printing spaces
+      for (int j = size; j > i; j--) {
+        System.out.print(" ");
+      }
+      // printing star
+      for (int k = 0; k < i * 2 - 1; k++) {
+        if (k == 0 || k == 2 * i - 2) {
+          System.out.print("*");
+        }
+        else {
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+    // downside triangle
+    for (int i = 1; i < size; i++) {
+      // printing spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // printing star
+      for (int k = (size - i) * 2 - 1; k >= 1; k--) {
+        if (k == 1 || k == (size - i) * 2 - 1) {
+          System.out.print("*");
+        }
+        else {
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+13. Hourglass star pattern in Java
+You can see below the hourglass pattern. It is a combination of reverse pyramid and pyramid pattern.
+
+*********
+ *******
+  *****
+   ***
+    *
+   ***
+  *****
+ *******
+*********
+Here is complete code to create hourglass pattern program in Java:
+
+public class hourGlass {
+  public static void main(String[] args) {
+    int size = 5;
+    // reversed pyramid star pattern
+    for (int i = 0; i < size; i++) {
+      // printing spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // printing star
+      for (int k = 0; k < (size - i) * 2 - 1; k++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+    // pyramid star pattern
+    for (int i = 2; i <= size; i++) {
+      // printing spaces
+      for (int j = size; j > i; j--) {
+        System.out.print(" ");
+      }
+      // printing star
+      for (int k = 0; k < i * 2 - 1; k++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+*********
+ *******
+  *****
+   ***
+    *
+   ***
+  *****
+ *******
+*********
+14. Right pascal star pattern
+The right pascal star pattern is easy to create with 2 sets of nested for loops.
+
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+You can see in the above pattern it is a combination of the right triangle star pattern and reversed triangle star pattern together. Here is the complete code for the right pascal pattern program in Java.
+
+public class leftPascal {
+  public static void main(String[] args) {
+    // left pasal triangle
+    int size = 5;
+
+    for (int i = 1; i <= size; i++) {
+      for (int j = 0; j < i; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+    
+    for (int i = 1; i <= size - 1; i++) {
+      for (int j = 0; j < size - i; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+15. Left pascal star pattern
+The left pascal star pattern is the mirror image of the right pascal star pattern and you have to work with spaces also in this.
+
+    *
+   **
+  ***
+ ****
+*****
+ ****
+  ***
+   **
+    *
+Here is complete code to create left pascal pattern program in Java:
+
+public class leftPascal {
+  public static void main(String[] args) {
+    // left pasal triangle
+    int size = 5;
+
+    for (int i = 1; i <= size; i++) {
+      for (int j = 0; j < size - i; j++) {
+        System.out.print(" ");
+      }
+      for (int k = 0; k < i; k++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+    for (int i = 1; i <= size - 1; i++) {
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      for (int k = 0; k < size - i; k++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    *
+   **
+  ***
+ ****
+*****
+ ****
+  ***
+   **
+    *
+16. Heart pattern
+ ***   ***
+***** *****
+***********
+ *********
+  *******
+   *****
+    ***
+     *
+Heart star pattern is quite complex pattern. Here is complete code to create heart pattern program in Java:
+
+public class heart {
+  public static void main(String[] args) {
+    // heart star pattern
+    int size = 6;
+
+    for (int i = size / 2; i < size; i += 2) {
+      // print first spaces
+      for (int j = 1; j < size - i; j += 2) {
+        System.out.print(" ");
+      }
+      // print first stars
+      for (int j = 1; j < i + 1; j++) {
+        System.out.print("*");
+      }
+      // print second spaces
+      for (int j = 1; j < size - i + 1; j++) {
+        System.out.print(" ");
+      }
+      // print second stars
+      for (int j = 1; j < i + 1; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+    // lower part
+    // inverted pyramid
+    for (int i = size; i > 0; i--) {
+      for (int j = 0; j < size - i; j++) {
+        System.out.print(" ");
+      }
+      for (int j = 1; j < i * 2; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+ ***   ***
+***** *****
+***********
+ *********
+  *******
+   *****
+    ***
+     *
+17. Plus pattern program in Java
+The plus pattern has the shape of the mathematical plus sign (+).
+
+  *
+  *
+*****
+  *
+  *
+Here is complete code to create plus pattern program in Java:
+
+public class plus {
+  public static void main(String[] args) {
+    // size of plus, use odd number
+    int size = 5;
+
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        // print only stars in middle row
+        if (i == size / 2) {
+          System.out.print("*");
+        }
+        // other than middle row, print star only at index size/2
+        else {
+          if (j == size / 2) {
+            System.out.print("*");
+          } else {
+            System.out.print(" ");
+          }
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+  *
+  *
+*****
+  *
+  *
+18. Cross pattern program in Java
+The cross pattern has the shape of the mathematical cross sign (X).
+
+*   *
+ * * 
+  *  
+ * * 
+*   *
+Here is complete code to create cross pattern program in Java:
+
+public class cross {
+  public static void main(String[] args) {
+    // size of cross, use odd number
+    int size = 5;
+
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        if (i==j || i+j==size-1) {
+          System.out.print("*");
+        } else {
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+
+*   *
+ * *
+  *
+ * *
+*   *
+We have seen 18 star patterns till now let's see some number patterns.
+
+19. Left triangle number pattern
+1
+12
+123
+1234
+12345
+Here is complete code to create a left triangle number pattern program in Java:
+
+public class leftTrianlge {
+  public static void main(String[] args) {
+
+    int size = 5;
+    // loop to print the pattern
+    for (int i = 0; i < size; i++) {
+      // print column
+      for (int j = 0; j <= i; j++) {
+        System.out.print(j+1);
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+1
+12
+123
+1234
+12345
+20. Right triangle number pattern
+    1
+   12
+  123
+ 1234
+12345
+Here is complete code to create the right triangle number pattern program in Java:
+
+public class rightTrianlge {
+  public static void main(String[] args) {
+
+    int size = 5;
+    // loop to print the pattern
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 1; j < size - i; j++) {
+        System.out.print(" ");
+      }
+      // print number
+      for (int k = 0; k <= i; k++) {
+        System.out.print(k+1);
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    1
+   12
+  123
+ 1234
+12345
+21. Number pyramid pattern
+The number pyramid pattern has the shape of the mathematical number pyramid.
+
+    1
+   123
+  12345
+ 1234567
+123456789
+Here is complete code to create number pyramid pattern program in Java:
+
+public class numberPyramid {
+  // pyramid stnumberar pattern
+  public static void main(String[] args) {
+
+    int size = 5;
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 0; j < size - i - 1; j++) {
+        System.out.print(" ");
+      }
+      // print number
+      for (int k = 0; k < 2 * i + 1; k++) {
+        System.out.print(k+1);
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    1
+   123
+  12345
+ 1234567
+123456789
+22. Number pyramid reverse pattern
+The number pyramid reverse pattern has the shape of the mathematical number pyramid in reverse order.
+
+123456789
+ 1234567
+  12345
+   123
+    1
+Here is complete code to create a number pyramid reverse pattern in Java:
+
+public class reverseNumberPyramid {
+  public static void main(String[] args) {
+    
+    int size = 5;
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // print number
+      for (int k = 0; k < 2 * (size - i) - 1; k++) {
+        System.out.print(k+1);
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+123456789
+ 1234567
+  12345
+   123
+    1
+23. Hollow number pyramid pattern
+The hollow number pyramid pattern has the shape of the mathematical number pyramid with hollow inside.
+
+    1
+   1 2
+  1   2
+ 1     2
+123456789
+Here is complete code to create hollow number pyramid pattern in Java:
+
+public class hollowNumberPyramid {
+  public static void main(String[] args) {
+
+    int size = 5;
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 0; j < size - i - 1; j++) {
+        System.out.print(" ");
+      }
+      // print number
+      int num = 1;
+      for (int k = 0; k < 2 * i + 1; k++) {
+        if (i == 0 || i == size - 1) {
+          System.out.print(num++);
+        } else {
+          if (k == 0 || k == 2 * i) {
+            System.out.print(num++);
+          } else {
+            System.out.print(" ");
+          }
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    1
+   1 2
+  1   2
+ 1     2
+123456789
+24. Number diamond pattern
+The number diamond pattern has the shape of the diamond made of numbers.
+
+    1
+   123
+  12345
+ 1234567
+123456789
+ 1234567
+  12345
+   123
+    1
+Here is complete code to create number diamond pattern in Java:
+
+public class numberDiamond {
+  public static void main(String[] args) {
+    int size = 5;
+    int num = 1;
+    // upside pyramid
+    for (int i = 1; i <= size; i++) {
+      // printing spaces
+      for (int j = size; j > i; j--) {
+        System.out.print(" ");
+      }
+      // printing number
+      for (int k = 0; k < i * 2 - 1; k++) {
+        System.out.print(num++);
+      }
+      // set the number to 1
+      num = 1;
+      System.out.println();
+    }
+    // downside pyramid
+    for (int i = 1; i <= size - 1; i++) {
+      // printing spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // printing number
+      for (int k = (size - i) * 2 - 1; k > 0; k--) {
+        System.out.print(num++);
+      }
+      // set num to 1
+      num = 1;
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    1
+   123
+  12345
+ 1234567
+123456789
+ 1234567
+  12345
+   123
+    1
+25. Hollow number diamond pattern
+The hollow number diamond pattern has the shape of the diamond made of numbers with hollow inside.
+
+    1
+   1 2
+  1   2
+ 1     2
+1       2
+ 1     2
+  1   2
+   1 2
+    1
+Here is complete code to create hollow number diamond pattern program in Java:
+
+public class hollowDiamond {
+  public static void main(String[] args) {
+    int size = 5, num = 1;
+    // upside pyramid
+    for (int i = 1; i <= size; i++) {
+      // printing spaces
+      for (int j = size; j > i; j--) {
+        System.out.print(" ");
+      }
+      // printing number
+      for (int k = 0; k < i * 2 - 1; k++) {
+        if (k == 0 || k == 2 * i - 2) {
+          System.out.print(num++);
+        } else {
+          System.out.print(" ");
+        }
+      }
+      // set the number to 1
+      num = 1;
+      System.out.println();
+    }
+    // downside triangle
+    for (int i = 1; i < size; i++) {
+      // printing spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // printing number
+      for (int k = (size - i) * 2 - 1; k >= 1; k--) {
+        if (k == 1 || k == (size - i) * 2 - 1) {
+          System.out.print(num++);
+        } else {
+          System.out.print(" ");
+        }
+      }
+      // set the number to 1
+      num = 1;
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    1
+   1 2
+  1   2
+ 1     2
+1       2
+ 1     2
+  1   2
+   1 2
+    1
+Let's now create some patterns that use alphabets instead of stars or numbers.
+
+26. Alphabet pyramid pattern
+The alphabet pyramid pattern has the shape of the pyramid made of alphabets.
+
+    A
+   ABC
+  ABCDE
+ ABCDEFG
+ABCDEFGHI
+Here is complete code to create alphabet pyramid pattern program in Java:
+
+public class alphabetPyramid {
+  // pyramid alphabet pattern
+  public static void main(String[] args) {
+
+    int size = 5, alpha = 65;
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 0; j < size - i - 1; j++) {
+        System.out.print(" ");
+      }
+      // print alphabets
+      for (int k = 0; k < 2 * i + 1; k++) {
+        System.out.print((char)(alpha+k));
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    A
+   ABC
+  ABCDE
+ ABCDEFG
+ABCDEFGHI
+27. Reverse alphabet pyramid pattern
+The reverse alphabet pyramid pattern has the shape of a reversed pyramid made of alphabets.
+
+ABCDEFGHI
+ ABCDEFG
+  ABCDE
+   ABC
+    A
+Here is complete code to create reverse alphabet pyramid Java pattern program:
+
+public class reverseAlphabetPyramid {
+  public static void main(String[] args) {
+    // size of the square
+    int size = 5, alpha = 65;
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // print alphabets
+      for (int k = 0; k < 2 * (size - i) - 1; k++) {
+        System.out.print((char) (alpha + k));
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+ABCDEFGHI
+ ABCDEFG
+  ABCDE
+   ABC
+    A
+28. Hollow alphabet pyramid pattern
+The hollow alphabet pyramid pattern has the shape pyramid hollow inside which is made of alphabets.
+
+    A
+   B C
+  D   E
+ F     G
+HIJKLMNOP
+Here is complete code to create a hollow alphabet pyramid Java pattern program:
+
+public class hollowAlphabetPyramid {
+  public static void main(String[] args) {
+    
+    int size = 5, alpha = 65, num = 0;
+    for (int i = 0; i < size; i++) {
+      // print spaces
+      for (int j = 0; j < size - i - 1; j++) {
+        System.out.print(" ");
+      }
+      // print alphabets
+      for (int k = 0; k < 2 * i + 1; k++) {
+        if (i == 0 || i == size - 1) {
+          System.out.print((char)(alpha+num++));
+        } else {
+          if (k == 0 || k == 2 * i) {
+            System.out.print((char)(alpha+num++));
+          } else {
+            System.out.print(" ");
+          }
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    A
+   B C
+  D   E
+ F     G
+HIJKLMNOP
+29. Alphabet diamond pattern
+The alphabet diamond pattern has the shape of a diamond made of alphabets.
+
+    A
+   ABC
+  ABCDE
+ ABCDEFG
+ABCDEFGHI
+ ABCDEFG
+  ABCDE
+   ABC
+    A
+Here is complete code to create alphabet diamond Java pattern program:
+
+public class alphabetDiamond {
+  public static void main(String[] args) {
+    int size = 5;
+    int alpha = 65;
+    int num = 0;
+    // upside pyramid
+    for (int i = 1; i <= size; i++) {
+      // printing spaces
+      for (int j = size; j > i; j--) {
+        System.out.print(" ");
+      }
+      // printing alphabets
+      for (int k = 0; k < i * 2 - 1; k++) {
+        System.out.print((char)(alpha+num++));
+      }
+      // set the number to 0
+      num = 0;
+      System.out.println();
+    }
+    // downside pyramid
+    for (int i = 1; i <= size - 1; i++) {
+      // printing spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // printing alphabets
+      for (int k = (size - i) * 2 - 1; k > 0; k--) {
+        System.out.print((char)(alpha+num++));
+      }
+      // set num to 0
+      num = 0;
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    A
+   ABC
+  ABCDE
+ ABCDEFG
+ABCDEFGHI
+ ABCDEFG
+  ABCDE
+   ABC
+    A
+30. Hollow alphabet diamond pattern
+The hollow alphabet diamond pattern has the shape of a diamond hollow inside which is made of alphabets.
+
+    A
+   A B
+  A   B
+ A     B
+A       B
+ A     B
+  A   B
+   A B
+    A
+Here is complete code to create hollow alphabet diamond Java pattern program:
+
+public class hollowAlphabetDiamond {
+  public static void main(String[] args) {
+    int size = 5;
+    int alpha = 65;
+    int num = 0;
+    // upside pyramid
+    for (int i = 1; i <= size; i++) {
+      // printing spaces
+      for (int j = size; j > i; j--) {
+        System.out.print(" ");
+      }
+      // printing alphabets
+      for (int k = 0; k < i * 2 - 1; k++) {
+        if (k == 0 || k == 2 * i - 2) {
+          System.out.print((char)(alpha+num++));
+        } else {
+          System.out.print(" ");
+        }
+      }
+      // set the number to 0
+      num = 0;
+      System.out.println();
+    }
+    // downside triangle
+    for (int i = 1; i < size; i++) {
+      // printing spaces
+      for (int j = 0; j < i; j++) {
+        System.out.print(" ");
+      }
+      // printing alphabets
+      for (int k = (size - i) * 2 - 1; k >= 1; k--) {
+        if (k == 1 || k == (size - i) * 2 - 1) {
+          System.out.print((char)(alpha+num++));
+        } else {
+          System.out.print(" ");
+        }
+      }
+      // set the number to 0
+      num = 0;
+      System.out.println();
+    }
+  }
+}
+Output:
+
+    A
+   A B
+  A   B
+ A     B
+A       B
+ A     B
+  A   B
+   A B
+    A
+Conclusion
+In this article, we have discussed 30 different java pattern programs in different ways. We used stars, numbers and, alphabets to create patterns.
+
+Also, look at star pattern in javascript and star pattern in python.
+
+About Us
+About us
+Contact us
+Privacy Policy
+Disclaimer
+Tutorials
+ HTML5
+ CSS3
+ JavaScript
+ Bootstrap 4
+ Python
+ Practice Problems
+Tools
+HTML Editor
+Advance HTML Editor
+JavaScript Compiler
+Follow Us
+Copyright © 2023 Tutorials Tonight
+
+
+x
